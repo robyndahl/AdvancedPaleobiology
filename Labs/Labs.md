@@ -2,7 +2,7 @@
 
 Lab | Due Date | Description
 --- | -------- | -----------
-[Lab01](/Labs/Lab01.md) | 01.15 | R Beginner Concepts
+[Lab 01](/Labs/Lab01.md) | 01.15 | R Beginner Concepts
 [Lab02] | 01.17 | R Intermediate Concepts
 [Lab03] | 01.22 | R Advanced Concepts
 [Lab04] | 01.24 | R Expert Concepts
