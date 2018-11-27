@@ -169,15 +169,15 @@ Let's consider a quadratic equation, ````5x ^ 2 + 3x + 7````. Let's say we want 
 [1] 99
 ````
 
-But what if we want to solve this equation for multiple values of x? Let's try solving for x = 1, 2, 3, and 4. We can do this by telling R to perform the function on all four numbers at once using the ````c()```` command.
+But what if we want to solve this equation for multiple values of x? Let's try solving for x = 1, 2, 3, and 4. We can do this by telling R to perform the function on all four numbers at once using the ````c( )```` command.
 
 ````R
-# The c() function tells R to treat the values inside the parentheses, separated by commas, as a single object.
+# The c( ) function tells R to treat the values inside the parentheses, separated by commas, as a single object.
 > 5 * c(1,2,3,4) ^ 2 + 3 * c(1,2,3,4) + 7
 [1] 15 33 61 99
 ````
 
-But what if we had a very long equation and/or a very long list of x values that we want to solve for? Typing all those x values with ````c()```` every time x appears in the equation could get very hard to read very quickly.
+But what if we had a very long equation and/or a very long list of x values that we want to solve for? Typing all those x values with ````c( )```` every time x appears in the equation could get very hard to read very quickly.
 
 ````R
 # Typing things out every time would defeat the whole point of using computers.
@@ -208,3 +208,97 @@ An array is essentially a set of values saved to your computer memory that is re
 > 5 * MyArray ^ 2 + 3 * MyArray + 7
 [1] 15 33 61 99
 ````
+
+## Differences Between Array (the Object) and array( ) (the Function)
+
+Remember that everything that **exists** in R is an **object** and everything that you **do** in R is a **function**. In the above example, ````MyArray```` is an object (an array) that you created by using a function: ````array( )````.
+
+If you are ever interested in knowing whether an object is an **array** or a **function**, you can use the function ````class( )````. All objects have a class.
+
+````R
+> MyArray <- array(data=c(1,2,3,4), dim = 4)
+> class(MyArray)
+[1] "array"
+
+> class(array)
+[1] "function"
+````
+
+Any time that you want to store the output of a function as an object, you use the ````<-```` operator, also known as the **assign** operator. In the ````MyArray```` example, ````<-```` tells R to store the output of the function on the right, ````array( )````, under the name on the left - i.e., ````MyArray````.
+
+````R
+# Here are some other examples:
+> FirstObject <- sqrt(5)
+> FirstObject
+[1] 2.236068
+
+# Note that an existing object can be used to make a new object.
+> SecondObject <- factorial(FirstObject ^ 2)
+> SecondObject
+[1] 120
+````
+Any time that you want to store the output of a function as an object, you use the ````<-```` operator, also known as the **assign** operator. In the ````MyArray```` example, ````<-```` tells R to store the output of the function on the right, ````array( )````, under the name on the left - i.e., ````MyArray````.
+
+````R
+# Let's review the "MyArray" example again
+> MyArray <- array(data = c(1,2,3,4), dim=4)
+````
+
+The ````data=```` is your way of telling it what you want stored in the array. In this case, it's the numbers one, two, three, and four, but you could substitute any list of values or even a single value.
+
+````R
+# Single value example
+> SingleArray<-array(data=5,dim=1)
+````
+
+In other words data is the **argument** name, and you're telling it what values you want that argument to take. Another way of thinking about this is that you're telling R to *temporarily* create an **object** named **data** that the function ````array( )```` should use and then delete once the function completes. 
+
+Similarly, ````dim=```` (short for dimensions) indicates how many values you want in the array. If you indicate more values to the array then you provide, R will simply repeat the values you did give it until the array is full.
+
+````R
+> MyArray<-array(data=c(1,2,3,4,5),dim=10)
+> MyArray
+[1] 1 2 3 4 5 1 2 3 4 5
+````
+
+Beware! This is really bad behavior and most computer languages would not allow it. The potential for introducing error into your calculation in this way isn't trivial, so be precise when defining your array size!
+
+Perhaps the most interesting aspect of ````dim=```` is that you can also give it multiple values. Remember that when we want to treat multiple values as a single object, we use the ````c( )```` function.
+
+````R
+# Two dimensional array
+> TwoArray<-array(data=c(0,1),dim=c(4,6))
+> TwoArray
+     [,1] [,2] [,3] [,4] [,5] [,6]
+[1,]    0    0    0    0    0    0
+[2,]    1    1    1    1    1    1
+[3,]    0    0    0    0    0    0
+[4,]    1    1    1    1    1    1
+````
+
+Essentially, you told R to make 6 arrays with 4 values and store them within a single object named **"TwoArray"**.
+
+````R
+# You can do this as many times as you'd like. For example, 2 sets of 6 sets of arrays with 4 values.
+> ThreeArray<-array(data=c(0,1),dim=c(4,6,2))
+> ThreeArray
+, , 1
+
+     [,1] [,2] [,3] [,4] [,5] [,6]
+[1,]    0    0    0    0    0    0
+[2,]    1    1    1    1    1    1
+[3,]    0    0    0    0    0    0
+[4,]    1    1    1    1    1    1
+
+, , 2
+
+     [,1] [,2] [,3] [,4] [,5] [,6]
+[1,]    0    0    0    0    0    0
+[2,]    1    1    1    1    1    1
+[3,]    0    0    0    0    0    0
+[4,]    1    1    1    1    1    1
+````
+
+We describe arrays based on the number of arrays referenced within them. A single array is a **1-dimensional array**. An array of arrays is a **2-dimensional array**. An array of arrays of arrays is a **3-dimensional array**, and so on.
+
+Incidentally, if you ever want to check the dimensions of an array, you can use the ````dim( )```` function.
