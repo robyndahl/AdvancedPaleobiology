@@ -7,11 +7,11 @@ In this tutorial, you will learn the most basic concept of using the programming
 ## Table of Contents
 
 + [The most basic concepts of R](#the-most-basic-concepts-of-r)
-+ Why should you use R?
-+ R as a fancy scientific calculator
-+ Using functions for basic math
-+ Storing data in an array
-+ The different types of data
++ [Why should you use R?](#why-should-you-use-r)
++ [R as a fancy scientific calculator](#r-as-a-fancy-calculator)
++ [Using functions for basic math](#using-functions-for-basic-math)
++ [Storing data in an array](#storing-data-in-an-array)
++ [The different types of data](#the-different-types-of-data)
 + Vectors and matrices as special arrays
 + Referencing elements of an array
 + Multiple data types in an array
