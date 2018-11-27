@@ -6,7 +6,7 @@ In this tutorial, you will learn the most basic concept of using the programming
 
 ## Table of Contents
 
-+ The most basic concepts of R
++ [The most basic concepts of R](#the-most-basic-concepts-of-r)
 + Why should you use R?
 + R as a fancy scientific calculator
 + Using functions for basic math
