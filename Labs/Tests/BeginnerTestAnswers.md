@@ -1,6 +1,6 @@
 # Beginner Concepts Test Answers
 
-## 1. What **class** of objects is ````mtcars````? What function did you use to find out?
+1. What **class** of objects is ````mtcars````? What function did you use to find out?
 
 ````mtcars```` is a data.frame. I used the following code to find out:
 
@@ -9,7 +9,7 @@
 [1] "data.frame"
 ````
 
-## 2. Is ````precip```` defined as a 1-dimensional array or a vector? How did you find out?
+2. Is ````precip```` defined as a 1-dimensional array or a vector? How did you find out?
 
 ````precip```` is both a 1-dimensional array and a vector, because they are the same thing. I checked if ```precip``` was a vector using the following code:
 
@@ -18,7 +18,7 @@
 [1] TRUE
 ````
 
-## 3. How would you convert the data.frame ````trees```` into a matrix?
+3. How would you convert the data.frame ````trees```` into a matrix?
 
 ````R
 > NewMatrix <- as(trees,"matrix")
@@ -57,7 +57,7 @@
 [31,]  20.6     87   77.0
 ````
 
-## 4. What is the name of the 14th city in the ````precip```` dataset?
+4. What is the name of the 14th city in the ````precip```` dataset?
 
 ````R
 > precip[14]
@@ -65,7 +65,7 @@ Atlanta
    48.3
 ````
 
-## 5. What function would you use if you wanted to combine all three datasets into a single object?
+5. What function would you use if you wanted to combine all three datasets into a single object?
 
 ````R
 > MyList <- list(precip,trees,mtcars)
@@ -73,14 +73,14 @@ Atlanta
 
 I am not showing the resulting list because it's too long to show here.
 
-## 6. Does precip consist of numeric data? How did you find out?
+6. Does precip consist of numeric data? How did you find out?
 
 ````R
 > is(precip, "numeric")
 [1] TRUE
 ````
 
-## 7. Code four different ways to subscript the 2nd row and 7th column of ````mtcars```` using bracket notation.
+7. Code four different ways to subscript the 2nd row and 7th column of ````mtcars```` using bracket notation.
 
 ````R
 > mtcars[2,7]
@@ -96,13 +96,13 @@ I am not showing the resulting list because it's too long to show here.
 [1] 17.02
 ````
 
-## 8. How would you convert the precipitation values of Juneau, Phoenix and Sacramento to 23, 46, and 12 in the ````precip```` dataset?
+8. How would you convert the precipitation values of Juneau, Phoenix and Sacramento to 23, 46, and 12 in the ````precip```` dataset?
 
 ````R
 > precip[c("Juneau","Phoenix","Sacramento")] <- c(23,46,12)
 ````
 
-## 9. Are there any trees in the ````trees```` dataset with more girth than volume? How did you find out?
+9. Are there any trees in the ````trees```` dataset with more girth than volume? How did you find out?
 
 No, there are none. I used the following code to find out:
 
@@ -111,7 +111,7 @@ No, there are none. I used the following code to find out:
 [1] FALSE
 ````
 
-## 10. Take the sum of all elements in column height of the trees dataset, call this value ValueA. Take the sum of all elements in row Valiant of the mtcars dataset, call this value ValueB. Take the sum of the first 8 elements of the precip dataset, call this value ValueC. Divide ValueC by ValueB and add ValueA. What is your final answer?
+10. Take the sum of all elements in column height of the ````trees```` dataset, call this value ValueA. Take the sum of all elements in row Valiant of the ````mtcars```` dataset, call this value ValueB. Take the sum of the first 8 elements of the ````precip```` dataset, call this value ValueC. Divide ValueC by ValueB and add ValueA. What is your final answer?
 
 The answer is 2356.633. I used the following code:
 
