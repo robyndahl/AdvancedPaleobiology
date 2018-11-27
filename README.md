@@ -1,4 +1,4 @@
-# AdvancedPaleobiology
+# Advanced Paleobiology
 Geology 497Q/597Q
 
 Western Washington University
