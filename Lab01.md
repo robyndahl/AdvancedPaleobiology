@@ -102,4 +102,69 @@ If you have ever used a scientific calculator or a graphing calculator, then you
 > (-5) ^ 2
 [1] 25
 ````
+
 You can also perform what are **logical operations**. A **logical** returns a value of either ````TRUE```` or ````FALSE````. Logicals are extraordinarily impportant to R.
+
+````R
+# Let's ask R if 0 is greater than 1
+> 0 > 1
+[1] FALSE
+
+# What about if 5 is 1/2 of 10?
+> 5 == (1/2 * 10)
+[1] TRUE
+````
+
+Notice that we used ````==```` to ask if these two quantities are equal, rather than a single ````=```` sign. Most **operators** in R are straightforward, but there are some (like ````==````) that are not intuitive. Here is a list of the basics. There are a few other operators in R, but we will worry about them later.
+
+Operator Example | Operator Definition
+---------------- | -------------------
+x **>** y | Is x **greater than** y
+x **>=** y | Is x **greater than or equal to** y
+x **<** y | Is x **less than** y
+x **<=** y | Is x **less than or equal to** y
+x **==** y | Is x **equal to** y
+x **!=** y | Is x **not equal to** y
+
+## Using Functions for Basic Math
+
+Of course, writing out the arithmetic every time wouldn't be any better than just using a calculator. The first benefit that R has over a calculator is that it many **functions** for arithmetic expressions that you can use as shortcuts.
+
+````R
+# For example, if I wanted to take the square root of a number, I could just write out the expression:
+> 4 ^ (1/2)
+[1] 2
+
+# But, I can use the sqrt() function to do this as well. Note that all the functions have two parts.
+# The function name - e.g., sqrt - and a set of function arguments.
+# Arguments are objects that you want the function to evaluate - e.g., the number 4.
+# Function arguments are always placed in parthentheses.
+> sqrt(4)
+[1] 2
+````
+
+Now you might be thinking, that doesn't really save any time compared to writing the expression. True, but functions will save you time on more complex expressions.
+
+````R
+# Let's try typing out 10!
+> 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1
+[1] 3628800
+
+# Compare that to the factorial function:
+> factorial(10) # much clearer!
+[1] 3628800
+````
+
+The second most important benefit of functions is that they explicitly say what your code is doing (remember the first rule of R!) Seeing ````factorial(10)```` makes it immediately obvious that you are calculating the factorial of ten.
+
+## Storing Data in an Array
+
+These simple functions probably still don't seem that impressive if you consider that most calculators already have buttons for square roots and factorials, etc. However, functions in R don't really shine until they are paired with stored data.
+
+Let's consider a quadratic equation, ````5x ^ 2 + 3x + 7````. Let's say we want to solve this equation for ````x = 4````. That's easy to do in the way that we've already learned:
+
+````R
+# 5x ^ 2 + 3x + 7, where x = 4
+> 5 * (4 ^ 2) + (3 * 4) + 7
+[1] 99
+````
