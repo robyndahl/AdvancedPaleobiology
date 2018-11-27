@@ -168,3 +168,43 @@ Let's consider a quadratic equation, ````5x ^ 2 + 3x + 7````. Let's say we want 
 > 5 * (4 ^ 2) + (3 * 4) + 7
 [1] 99
 ````
+
+But what if we want to solve this equation for multiple values of x? Let's try solving for x = 1, 2, 3, and 4. We can do this by telling R to perform the function on all four numbers at once using the ````c()```` command.
+
+````R
+# The c() function tells R to treat the values inside the parentheses, separated by commas, as a single object.
+> 5 * c(1,2,3,4) ^ 2 + 3 * c(1,2,3,4) + 7
+[1] 15 33 61 99
+````
+
+But what if we had a very long equation and/or a very long list of x values that we want to solve for? Typing all those x values with ````c()```` every time x appears in the equation could get very hard to read very quickly.
+
+````R
+# Typing things out every time would defeat the whole point of using computers.
+> 9 * c(1,2,3,4,5,6,7,8,9,10) ^ 3 + 6 * c(1,2,3,4,5,6,7,8,9,10) ^ 2 + 8 * c(1,2,3,4,5,6,7,8,9,10) + 2
+[1]   25  114  323  706 1317 2210 3439 5058 7121 9682
+````
+
+A better alternative involves learning how to store data as an **object**, and then plugging it into equations. The most fundamental type of data object in computer science is generally called an **array**. In R, there is an even more fundamental type of data object known as a **vector**. For now, let's talk about arrarys.
+
+An array is essentially a set of values saved to your computer memory that is referenced by a name.
+
+````R
+# Here is an example of how to make an array named "MyArray"
+> MyArray <- array(data = c(1,2,3,4), dim=4)
+
+# Once we've created the array named MyArray, then typing MyArray will return the values in the array.
+> MyArray
+[1] 1 2 3 4
+
+# Similarly, performing arithmetic on MyArray will apply that expression to all elements in the array.
+> MyArray + 4
+[1] 5 6 7 8
+
+# You can input MyArray into a function, and the function will be applied to each element (number) in the array.
+> factorial(MyArray)
+[1]  1  2  6 24
+
+> 5 * MyArray ^ 2 + 3 * MyArray + 7
+[1] 15 33 61 99
+````
