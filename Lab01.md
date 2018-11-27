@@ -248,7 +248,7 @@ The ````data=```` is your way of telling it what you want stored in the array. I
 
 ````R
 # Single value example
-> SingleArray<-array(data=5,dim=1)
+> SingleArray <- array(data=5,dim=1)
 ````
 
 In other words data is the **argument** name, and you're telling it what values you want that argument to take. Another way of thinking about this is that you're telling R to *temporarily* create an **object** named **data** that the function ````array( )```` should use and then delete once the function completes. 
@@ -256,7 +256,7 @@ In other words data is the **argument** name, and you're telling it what values 
 Similarly, ````dim=```` (short for dimensions) indicates how many values you want in the array. If you indicate more values to the array then you provide, R will simply repeat the values you did give it until the array is full.
 
 ````R
-> MyArray<-array(data=c(1,2,3,4,5),dim=10)
+> MyArray <- array(data=c(1,2,3,4,5), dim=10)
 > MyArray
 [1] 1 2 3 4 5 1 2 3 4 5
 ````
@@ -267,7 +267,7 @@ Perhaps the most interesting aspect of ````dim=```` is that you can also give it
 
 ````R
 # Two dimensional array
-> TwoArray<-array(data=c(0,1),dim=c(4,6))
+> TwoArray <- array(data=c(0,1), dim=c(4,6))
 > TwoArray
      [,1] [,2] [,3] [,4] [,5] [,6]
 [1,]    0    0    0    0    0    0
@@ -280,7 +280,7 @@ Essentially, you told R to make 6 arrays with 4 values and store them within a s
 
 ````R
 # You can do this as many times as you'd like. For example, 2 sets of 6 sets of arrays with 4 values.
-> ThreeArray<-array(data=c(0,1),dim=c(4,6,2))
+> ThreeArray < -array(data=c(0,1), dim=c(4,6,2))
 > ThreeArray
 , , 1
 
@@ -302,3 +302,48 @@ Essentially, you told R to make 6 arrays with 4 values and store them within a s
 We describe arrays based on the number of arrays referenced within them. A single array is a **1-dimensional array**. An array of arrays is a **2-dimensional array**. An array of arrays of arrays is a **3-dimensional array**, and so on.
 
 Incidentally, if you ever want to check the dimensions of an array, you can use the ````dim( )```` function.
+
+````R
+# Check the dim of MyArray
+> dim(MyArray)
+[1] 4 6 2
+````
+
+## The Different Types of Data
+
+What if we want to store something other than a number? There are a variety of data **types** in R, but there are only a few that you really need to know. Let's begin with the three most basic types:
+
+Data Type | Definition
+--------- | ----------
+**logical** | **TRUE** or **FALSE**
+**character** | letters, numbers, and symbols that act like letters
+**numeric** | numbers that act like numbers
+
+Type **logical** is fairly straightforward. It is simply a ````TRUE```` or ````FALSE```` value. Note, however, that R will convert ````TRUE```` to a ````1```` and ````FALSE```` to a ````O```` if you try to perform basic mathematically operations on an array of logical data.
+
+````R
+# Create an array of logical values
+> MyLogical <- array(data=c(TRUE,TRUE,FALSE,TRUE,FALSE,TRUE), dim=6)
+> MyLogical
+[1]  TRUE  TRUE FALSE  TRUE FALSE  TRUE
+
+# Multiply your 1-dimensional array of logicals by 3
+> MyLogical * 3
+[1] 3 3 0 3 0 3
+
+# You can check what type of data you have using the typeof( ) function:
+> typeof(MyLogical)
+[1] "logical"
+
+# Or, if you have a specific guess, you can use the is( ) function:
+> is(MyLogical, "logical")
+[1] TRUE
+
+# If you want to see if ANY elements in your logical array are TRUE, use the any( ) function:
+> any(MyLogical)
+[1] TRUE
+
+# If you want to see if ALL elements in your logical array are TRUE, use the all( ) function:
+> all(MyLogical)
+[1] FALSE
+````
