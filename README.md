@@ -9,5 +9,5 @@ Resources | Description
 [Course Syllabus] | A description of the course, including learning objectives, assignments, and schedule
 [Lecture Slides] | PDF versions of in-class lectures
 [Reading Assignments] | Weekly reading assignments to be discussed in class
-[Laboratory Assignments](/Labs/labs.md) | Lab assignments
+[Laboratory Assignments](/Labs/Labs.md) | Lab assignments
 [Other Assignments] | Writing assignments and other homework
