@@ -111,7 +111,7 @@ x / y | division | `6 \ 2`
 x ^ y | exponents | `10 ^ 2`
 x %% y | modulus (the remainder) | `4 %% 2`
 
-Remember to pay attention to the order of operations! `(1 + 3)/(5/6)` will return a different value than `1+3/5/6`.
+Remember to pay attention to the order of operations! `(1 + 3)/(5 / 6)` will return a different value than `1+3/5/6`.
 
 You can also perform what are called **logical operations**. A **logical** returns a value that is either `TRUE` or `FALSE`. Logicals are extraordinally important in R.
 
