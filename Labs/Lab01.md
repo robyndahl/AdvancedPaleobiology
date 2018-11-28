@@ -66,6 +66,8 @@ Error: object "hello, world" not found
 
 Ok, so clearly we are not using the correct language. We'll need to start with some basic terminology. Specifically, let's talk about **objects** and **functions**. These are the two fundamental units of the R programming language. R stores information as objects and uses functions to interact with those objects. The following quote sums this up quite well:
 
-*Everything that ***exists*** *in R is an object.*
+*Everything that* ***exists*** *in R is an object.*
 
-*Everything that you ***do*** *in R is a function.*
+*Everything that you* ***do*** *in R is a function.*
+
+So by typing `hello, world` in the command line, you were requesting R find an object called "hello, world". But no such object exists, because we have not defined any objects yet.
