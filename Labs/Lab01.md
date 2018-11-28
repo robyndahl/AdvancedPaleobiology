@@ -8,6 +8,7 @@ When you have completed this tutorial, you will be prepared to take the [Beginne
 
 + [What is R?](#what-is-r)
 + [The Most Basic R Concepts](#the-most-basic-r-concepts)
++ [Why Should You Use R?](#why-should-you-use-r)
 + [R as a Fancy Calculator](#r-as-a-fancy-calculator)
 + [Using Functions for Basic Math](#using-functions-for-basic-math)
 + [Storing Data in an Array](#storing-data-in-an-array)
@@ -71,3 +72,30 @@ Ok, so clearly we are not using the correct language. We'll need to start with s
 *Everything that you* ***do*** *in R is a function.*
 
 So by typing `hello, world` in the command line, you were requesting R find an object called "hello, world". But no such object exists, because we have not defined any objects yet.
+
+## Why Should You Use R?
+
+If you're confused about why we're doing any of this, just remember that everything we do in R is just a **function** designed for one of the following four purposes. Determine which step you are trying to perform and then proceed from there.
+
+1. **Mathematical Operations** - using R as a fancy calculator
+2. **Storing Data** - storing data in a format that allows you to perform a mathematical operation on it
+3. **Reshaping Data** - changing the format of previously stored data so that you can perform a different kind of operation on it
+4. **Visualizing Data** - methods to make graphs or other visual representations of stored data
+
+Although there are literally thousands of R functions, so long as you know a handful of basic methods for each of these four steps you can accomplish anything. This beginner's tutorial will largely focus on Mathematical Operations and Storing Data.
+
+## R as a Fancy Calculator
+
+If you have ever used a scientific or graphing calculator, then you already intuitively know all the basics of doing arithmetic in R. Yay! You've learned about 25% of R without even trying! But let's do a quick review anyway.
+
+How do you think you would ask R to perform addition? Try asking it to add two and two. Did it work?
+
+````R
+> 2+2
+[1] 4
+````
+Great! A couple of notes:
+
+*Spaces mean nothing in R*. You can type `> 2+2` or `> 2 + 2` and R will return the same answer. You can add as many spaces as you want and they will never impact the answer the R returns.
+
+*We'll talk about that* `[1]` *later*. The answer that R returned was obviously 4, but why was it preceded by that `[1]`? We'll discuss this a little bit later in the tutorial.
