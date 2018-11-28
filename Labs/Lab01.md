@@ -99,3 +99,20 @@ Great! A couple of notes:
 *Spaces mean nothing in R*. You can type `> 2+2` or `> 2 + 2` and R will return the same answer. You can add as many spaces as you want and they will never impact the answer the R returns.
 
 *We'll talk about that* `[1]` *later*. The answer that R returned was obviously 4, but why was it preceded by that `[1]`? We'll discuss this a little bit later in the tutorial.
+
+Try out some more arithmetic. Addition, subtraction, multiplication, and division should be pretty straightforward, but there are some other operators and things to keep in mind. Use the following table to review different operators, and test them out in R.
+
+Operator | Description | Example
+-------- | ----------- | -------
+x + y | addition | `2 + 2`
+x - y | subtraction | `4 - 1`
+x * y | multiplication | `2 * 3`
+x / y | division | `6 \ 2`
+x ^ y | exponents | `10 ^ 2`
+x %% y | modulus (the remainder) | `4 %% 2`
+
+Remember to pay attention to the order of operations! `(1 + 3)/(5/6)` will return a different value than `1+3/5/6`.
+
+You can also perform what are called **logical operations**. A **logical** returns a value that is either `TRUE` or `FALSE`. Logicals are extraordinally important in R.
+
+Try to figure out how you would ask R if 0 is greater than 1.
