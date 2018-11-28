@@ -1,6 +1,6 @@
 # R Beginner Concepts Test
 
-Complete this test by working through the problem sets and then uploading your answer sheet to your own GitHub Repository. Submit a link to your answer sheet in Canvas by the due date: Tuesday, January 15 at 2pm.
+Complete this test by working through the problem sets and then uploading your answer sheet to your own markdown sheet in your GitHub Repository. If you need a quick tutorial on how to create this document, [click here](/GitTutorial.md). Submit a link to your answer sheet in Canvas by the due date: Tuesday, January 15 at 2pm.
 
 ## Loading in Data
 
