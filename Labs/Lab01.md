@@ -12,8 +12,8 @@ In this tutorial, you will learn the most basic concept of using the programming
 + [Using functions for basic math](#using-functions-for-basic-math)
 + [Storing data in an array](#storing-data-in-an-array)
 + [The different types of data](#the-different-types-of-data)
-+ Vectors and matrices as special arrays
-+ Referencing elements of an array
++ [Vectors and matrices as special arrays](#vectors-and-matrices-as-special-arrays)
++ [Referencing elements of an array](#referencing-elements-of-an-array)
 + Multiple data types in an array
 + On the proper names of things
 
@@ -276,7 +276,9 @@ Perhaps the most interesting aspect of `dim=` is that you can also give it multi
 [4,]    1    1    1    1    1    1
 ````
 
-Essentially, you told R to make 6 arrays with 4 values and store them within a single object named **"TwoArray"**. Notice how the array displays, with the 4x6 grid bordered by bracketed information like `[,1]` or `[3,]`. This bracketed notation describes location in the row or column, and you can specify a location in the matrix by combining the column and row description. For example, the cell in the third row of the first column would be described as `[3,1]` and you can ask for the information in that cell like this:
+Essentially, you told R to make 6 arrays with 4 values and store them within a single object named **"TwoArray"**.
+
+Notice how the array displays, with the 4x6 grid bordered by bracketed information like `[,1]` or `[3,]`. This bracketed notation describes location in the row or column, and you can specify a location in the matrix by combining the column and row description. For example, the element in the third row of the first column would be described as `[3,1]` and you can ask for that element like this:
 
 ````R
 # Ask for the information in the third row of the first column
@@ -508,3 +510,53 @@ NULL
 ````
 
 If you look carefully at how we define arrays, you will notice that we need to first create a vector using the function `c( )` - e.g., `MyArray <- array(c(1,2,3,4),4)`. Generally, vectors are used more often than 1-dimensional arrays because vectors are more fundamental. So, be careful as to whether you are using **vectors**, **matrices**, or **arrays**.
+
+## Referencing Elements of an Array
+
+Each array is made up of a set of values. Each value within an array is known as an **element**.
+
+````R
+# Create a simple array with the array( ) function
+> MyArray <- array(data=c(5,6,7,8,9,10), dim=6)
+> MyArray
+[1]  5  6  7  8  9 10
+````
+
+In the example above, `MyArray` has six elements, the numbers 5, 6, 7, 8, 9, and 10. If you want to reference a specific element in the array, you use single brackets around the **index** or **position** of the element.
+
+````R
+# Reference the sixth element of MyArray
+> MyArray[6]
+[1] 10
+
+# Reference the third element of MyArray
+> MyArray[3]
+[1] 7
+````
+
+You can also name the various elements within an array. You can do this either when the array is first created or after you've already created the array. For now, let's just add names to an existing array.
+
+````R
+# Add names to an existing array using the names function
+> MyArray <- array(data=c(5,6,7,8,9,10), dim=6)
+
+# Let's check the names of MyArray using the names( ) function
+> names(MyArray)
+[1] NULL
+````
+
+There are no names attached to this array yet, so when you use `names( )`, it returns an empty array `NULL`.
+
+````R
+# You can store an array of names (as a character data type) to this empty array
+> names(MyArray) <- c("First","Second","Third","Fourth","Fifth","Sixth")
+> MyArray
+First Second  Third Fourth  Fifth  Sixth 
+    5      6      7      8      9     10 
+
+# You can now access an element based on its name rather than its index or position!
+# Find the fifth element
+> MyArray["Fifth"]
+Fifth
+    9
+````
