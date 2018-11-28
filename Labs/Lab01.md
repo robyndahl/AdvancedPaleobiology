@@ -88,7 +88,9 @@ Although there are literally thousands of R functions, so long as you know a han
 
 If you have ever used a scientific or graphing calculator, then you already intuitively know all the basics of doing arithmetic in R. Yay! You've learned about 25% of R without even trying! But let's do a quick review anyway.
 
-How do you think you would ask R to perform addition? Try asking it to add two and two. Did it work?
+How do you think you would ask R to perform addition? Try asking it to add two and two.
+
+Did it work?
 
 ````R
 > 2+2
@@ -96,7 +98,7 @@ How do you think you would ask R to perform addition? Try asking it to add two a
 ````
 Great! A couple of notes:
 
-*Spaces mean nothing in R*. You can type `> 2+2` or `> 2 + 2` and R will return the same answer. You can add as many spaces as you want and they will never impact the answer the R returns.
+*Spaces mean nothing in R*. You can type `> 2+2` or `> 2 + 2` and R will return the same answer. You can add as many spaces as you want and they will never impact the answer that R returns.
 
 *We'll talk about that* `[1]` *later*. The answer that R returned was obviously 4, but why was it preceded by that `[1]`? We'll discuss this a little bit later in the tutorial.
 
@@ -116,3 +118,10 @@ Remember to pay attention to the order of operations! `(1 + 3)/(5 / 6)` will ret
 You can also perform what are called **logical operations**. A **logical** returns a value that is either `TRUE` or `FALSE`. Logicals are extraordinally important in R.
 
 Try to figure out how you would ask R if 0 is greater than 1.
+
+Did it work?
+
+````R
+> 0 > 1
+[1] FALSE
+````
