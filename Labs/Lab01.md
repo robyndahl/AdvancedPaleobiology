@@ -356,7 +356,7 @@ Type **logical** is fairly straightforward. It is simply a `TRUE` or `FALSE` val
 [1] FALSE
 ````
 
-Type **character** is also fairly straightfoward. It is basically a way of "de-mathing" something. You tell R that something is meant to be a character by using quotation makrs `" "`:
+Type **character** is also fairly straightfoward. It is basically a way of "de-mathing" something. You tell R that something is meant to be a character by using quotation marks `" "`:
 
 ````R
 # Create an array of characters made of letters
@@ -368,3 +368,52 @@ Type **character** is also fairly straightfoward. It is basically a way of "de-m
 > typeof(MyCharacters)
 [1] "character"
 ````
+
+By "de-mathing", I mean that R will reject any attempts to do math on your array of characters, ***even if those characters are numbers.*** It is extremely important to remember whether you want the word `"word"` or the object `word`. Use quotations for the former and no quotations for the latter.
+
+````R
+# Create a vector of numbers as characters
+> MyCharacters <- array(c("1","2","3","4"), dim=4)
+> MyCharacters
+[1] "1" "2" "3" "4"
+
+# Attempt to add these numbers together using the sum( ) function
+> sum(MyCharacters)
+Error in sum(MyCharacters) : invalid 'type' (character) of argument
+````
+
+We need to use `" "` marks so that R knows you are not referencing an object.
+
+````R
+# Without " " marks returns an error because R thinks you are referencing an object
+# Read the error below and memorize it, because you may see it a lot!
+> WithoutQuotes
+Error: object 'WithoutQuotes' not found
+
+# With " " marks returns a character string
+> "WithQuotes"
+[1] "WithQuotes"
+````
+
+Type **numeric** is both a simple and complicated data type. Basically, numeric data are numbers that you want to do math on.
+
+````R
+# Create a numeric array
+> MyNumeric <- array(data=c(1,2,3,4), dim=4)
+> MyNumeric
+[1] 1 2 3 4
+
+# Attempt to add all numbers in MyNumeric together
+> sum(MyNumeric)
+[1] 10
+
+# Check if MyNumeric is of type numeric
+> is(MyNumeric,"numeric") # Remember the is( ) function from before?
+[1] TRUE
+
+# Check its data type
+> typeof(MyNumeric)
+[1] "double"
+````
+
+It returns **double** instead of **numeric**! There are actually a couple of types of numeric data, but for our uses, just consider **double** to be synonymous with **numeric** and leave it there for now.
