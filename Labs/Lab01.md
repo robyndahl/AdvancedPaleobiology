@@ -467,6 +467,7 @@ The majority of work done in R is either 1- or 2-dimensional. This has led to th
 Based on what you see above, you might think that you've deduced the appropriate function to create a vector, but `vector( )` doesn't work!
 
 ````R
+# Try to make a vector using vector( )
 > z <- vector(data=c(1,2,3,4), dim=4)
 Error in vector(data = c(1, 2, 3, 4), dim = 4) : 
   unused arguments (data = c(1, 2, 3, 4), dim = 4)
@@ -478,6 +479,11 @@ Even though vectors are *conceptually identical* to a 1-dimensional array, they 
 # Make a vector
 > MyVector <- c(1,2,3,4)
 > MyVector
+[1] 1 2 3 4
+
+# Let's make a 1-dimensional array
+> MyArray <- array(c(1,2,3,4),4)
+> MyArray
 [1] 1 2 3 4
 
 # You can check what type of array something is by using the is() function
@@ -502,8 +508,3 @@ NULL
 ````
 
 If you look carefully at how we define arrays, you will notice that we need to first create a vector using the function `c( )` - e.g., `MyArray <- array(c(1,2,3,4),4)`. Generally, vectors are used more often than 1-dimensional arrays because vectors are more fundamental. So, be careful as to whether you are using **vectors**, **matrices**, or **arrays**.
-# Let's make a 1-dimensional array
-> MyArray <- array(c(1,2,3,4),4)
-> MyArray
-[1] 1 2 3 4
-
