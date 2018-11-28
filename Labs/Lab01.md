@@ -237,7 +237,7 @@ Any time that you want to store the output of a function as an object, you use t
 > SecondObject
 [1] 120
 ````
-Any time that you want to store the output of a function as an object, you use the `<-` operator, also known as the **assign** operator. In the `MyArray` example, `<-` tells R to store the output of the function on the right, `array( )`, under the name on the left - i.e., `MyArray`.
+Let's talk some more about the `array( )` function, and about functions in general. Aside from the **symbolic** operations described above (e.g., `+`, `-`, `/`, `!=`, etc.), functions follow a simple format. They have a name (e.g, sqrt, factorial, array) that is followed by parentheses. Within these parentheses, you place one or more **arguments** that tell the function what to do.
 
 ````R
 # Let's review the "MyArray" example again
@@ -346,4 +346,17 @@ Type **logical** is fairly straightforward. It is simply a `TRUE` or `FALSE` val
 # If you want to see if ALL elements in your logical array are TRUE, use the all( ) function:
 > all(MyLogical)
 [1] FALSE
+````
+
+Type **character** is also fairly straightfoward. It is basically a way of "de-mathing" something. You tell R that something is meant to be a character by using quotation makrs `" "`:
+
+````R
+# Create an array of characters made of letters
+> MyCharacters <- array(data = c("Bob","Loves","Lucy","Almost","As","Much","As","He","Loves","R"),dim=10)
+> MyCharacters
+[1] "Bob"    "Loves"  "Lucy"   "Almost" "As"     "Much"   "As"     "He"     "Loves"  "R"
+
+# Check the type
+> typeof(MyCharacters)
+[1] "character"
 ````
