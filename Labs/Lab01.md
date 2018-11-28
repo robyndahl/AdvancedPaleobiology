@@ -21,6 +21,8 @@ When you have completed this tutorial, you will be prepared to take the [Beginne
 
 *Direct from the [R website](https://www.r-project.org):*
 
+### Introduction to R
+
 R is a language and environment for statistical computing and graphics. It is a GNU project which is similar to the S language and environment which was developed at Bell Laboratories (formerly AT&T, now Lucent Technologies) by John Chambers and colleagues. R can be considered as a different implementation of S. There are some important differences, but much code written for S runs unaltered under R.
 
 R provides a wide variety of statistical (linear and nonlinear modelling, classical statistical tests, time-series analysis, classification, clustering, …) and graphical techniques, and is highly extensible. The S language is often the vehicle of choice for research in statistical methodology, and R provides an Open Source route to participation in that activity.
@@ -40,3 +42,13 @@ R is an integrated suite of software facilities for data manipulation, calculati
 + a well-developed, simple and effective programming language which includes conditionals, loops, user-defined recursive functions and input and output facilities.
 
 The term “environment” is intended to characterize it as a fully planned and coherent system, rather than an incremental accretion of very specific and inflexible tools, as is frequently the case with other data analysis software.
+
+### How We Will Use R in GEOL 497Q/597Q
+
+R is one of the favorite programming languages for paleontologists, because statistics is the most commonly used type of math in paleontology. In our Advanced Paleobiology course, we will learn enough R to be able to conduct the most common types of staticial analyses used in paleontology. We will also use R for data visualization.
+
+## The Most Basic R Concepts
+
+Let's get started! Open R Studio. It should look something like this (though the colors may be different; you can choose the color scheme!):
+
+![R Studio Screenshot](/R_Studio.png)
