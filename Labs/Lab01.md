@@ -45,7 +45,7 @@ Spell things out for future readers of yoru programs as explicitly as possible. 
 
 "Always annotate your code, because the sucker trying to figure out what you did six months from now is going to be ***you***."
 
-To do this, you should always leave **thorough comments** in your code. Comments in R are always preceded by the ````#```` symbol. Anything that follows a ````#```` symbol will not be executed by the software.
+To do this, you should always leave **thorough comments** in your code. Comments in R are always preceded by the `#` symbol. Anything that follows a `#` symbol will not be executed by the software.
 
 ````R
 > # 2 * 5; everything on this line is a comment an none of this will execute if you copy it into R
@@ -103,7 +103,7 @@ If you have ever used a scientific calculator or a graphing calculator, then you
 [1] 25
 ````
 
-You can also perform what are **logical operations**. A **logical** returns a value of either ````TRUE```` or ````FALSE````. Logicals are extraordinarily impportant to R.
+You can also perform what are **logical operations**. A **logical** returns a value of either `TRUE` or `FALSE`. Logicals are extraordinarily impportant to R.
 
 ````R
 # Let's ask R if 0 is greater than 1
@@ -115,7 +115,7 @@ You can also perform what are **logical operations**. A **logical** returns a va
 [1] TRUE
 ````
 
-Notice that we used ````==```` to ask if these two quantities are equal, rather than a single ````=```` sign. Most **operators** in R are straightforward, but there are some (like ````==````) that are not intuitive. Here is a list of the basics. There are a few other operators in R, but we will worry about them later.
+Notice that we used `==` to ask if these two quantities are equal, rather than a single `=` sign. Most **operators** in R are straightforward, but there are some (like `==`) that are not intuitive. Here is a list of the basics. There are a few other operators in R, but we will worry about them later.
 
 Operator Example | Operator Definition
 ---------------- | -------------------
@@ -155,13 +155,13 @@ Now you might be thinking, that doesn't really save any time compared to writing
 [1] 3628800
 ````
 
-The second most important benefit of functions is that they explicitly say what your code is doing (remember the first rule of R!) Seeing ````factorial(10)```` makes it immediately obvious that you are calculating the factorial of ten.
+The second most important benefit of functions is that they explicitly say what your code is doing (remember the first rule of R!) Seeing `factorial(10)` makes it immediately obvious that you are calculating the factorial of ten.
 
 ## Storing Data in an Array
 
 These simple functions probably still don't seem that impressive if you consider that most calculators already have buttons for square roots and factorials, etc. However, functions in R don't really shine until they are paired with stored data.
 
-Let's consider a quadratic equation, ````5x ^ 2 + 3x + 7````. Let's say we want to solve this equation for ````x = 4````. That's easy to do in the way that we've already learned:
+Let's consider a quadratic equation, `5x ^ 2 + 3x + 7`. Let's say we want to solve this equation for `x = 4`. That's easy to do in the way that we've already learned:
 
 ````R
 # 5x ^ 2 + 3x + 7, where x = 4
@@ -169,7 +169,7 @@ Let's consider a quadratic equation, ````5x ^ 2 + 3x + 7````. Let's say we want 
 [1] 99
 ````
 
-But what if we want to solve this equation for multiple values of x? Let's try solving for x = 1, 2, 3, and 4. We can do this by telling R to perform the function on all four numbers at once using the ````c( )```` command.
+But what if we want to solve this equation for multiple values of x? Let's try solving for x = 1, 2, 3, and 4. We can do this by telling R to perform the function on all four numbers at once using the `c( )` command.
 
 ````R
 # The c( ) function tells R to treat the values inside the parentheses, separated by commas, as a single object.
@@ -177,7 +177,7 @@ But what if we want to solve this equation for multiple values of x? Let's try s
 [1] 15 33 61 99
 ````
 
-But what if we had a very long equation and/or a very long list of x values that we want to solve for? Typing all those x values with ````c( )```` every time x appears in the equation could get very hard to read very quickly.
+But what if we had a very long equation and/or a very long list of x values that we want to solve for? Typing all those x values with `c( )` every time x appears in the equation could get very hard to read very quickly.
 
 ````R
 # Typing things out every time would defeat the whole point of using computers.
@@ -211,9 +211,9 @@ An array is essentially a set of values saved to your computer memory that is re
 
 ## Differences Between Array (the Object) and array( ) (the Function)
 
-Remember that everything that **exists** in R is an **object** and everything that you **do** in R is a **function**. In the above example, ````MyArray```` is an object (an array) that you created by using a function: ````array( )````.
+Remember that everything that **exists** in R is an **object** and everything that you **do** in R is a **function**. In the above example, `MyArray` is an object (an array) that you created by using a function: `array( )`.
 
-If you are ever interested in knowing whether an object is an **array** or a **function**, you can use the function ````class( )````. All objects have a class.
+If you are ever interested in knowing whether an object is an **array** or a **function**, you can use the function `class( )`. All objects have a class.
 
 ````R
 > MyArray <- array(data=c(1,2,3,4), dim = 4)
@@ -224,7 +224,7 @@ If you are ever interested in knowing whether an object is an **array** or a **f
 [1] "function"
 ````
 
-Any time that you want to store the output of a function as an object, you use the ````<-```` operator, also known as the **assign** operator. In the ````MyArray```` example, ````<-```` tells R to store the output of the function on the right, ````array( )````, under the name on the left - i.e., ````MyArray````.
+Any time that you want to store the output of a function as an object, you use the `<-` operator, also known as the **assign** operator. In the `MyArray` example, `<-` tells R to store the output of the function on the right, `array( )`, under the name on the left - i.e., `MyArray`.
 
 ````R
 # Here are some other examples:
@@ -237,23 +237,23 @@ Any time that you want to store the output of a function as an object, you use t
 > SecondObject
 [1] 120
 ````
-Any time that you want to store the output of a function as an object, you use the ````<-```` operator, also known as the **assign** operator. In the ````MyArray```` example, ````<-```` tells R to store the output of the function on the right, ````array( )````, under the name on the left - i.e., ````MyArray````.
+Any time that you want to store the output of a function as an object, you use the `<-` operator, also known as the **assign** operator. In the `MyArray` example, `<-` tells R to store the output of the function on the right, `array( )`, under the name on the left - i.e., `MyArray`.
 
 ````R
 # Let's review the "MyArray" example again
 > MyArray <- array(data = c(1,2,3,4), dim=4)
 ````
 
-The ````data=```` is your way of telling it what you want stored in the array. In this case, it's the numbers one, two, three, and four, but you could substitute any list of values or even a single value.
+The `data=` is your way of telling it what you want stored in the array. In this case, it's the numbers one, two, three, and four, but you could substitute any list of values or even a single value.
 
 ````R
 # Single value example
 > SingleArray <- array(data=5,dim=1)
 ````
 
-In other words data is the **argument** name, and you're telling it what values you want that argument to take. Another way of thinking about this is that you're telling R to *temporarily* create an **object** named **data** that the function ````array( )```` should use and then delete once the function completes. 
+In other words data is the **argument** name, and you're telling it what values you want that argument to take. Another way of thinking about this is that you're telling R to *temporarily* create an **object** named **data** that the function `array( )` should use and then delete once the function completes. 
 
-Similarly, ````dim=```` (short for dimensions) indicates how many values you want in the array. If you indicate more values to the array then you provide, R will simply repeat the values you did give it until the array is full.
+Similarly, `dim=` (short for dimensions) indicates how many values you want in the array. If you indicate more values to the array then you provide, R will simply repeat the values you did give it until the array is full.
 
 ````R
 > MyArray <- array(data=c(1,2,3,4,5), dim=10)
@@ -263,7 +263,7 @@ Similarly, ````dim=```` (short for dimensions) indicates how many values you wan
 
 Beware! This is really bad behavior and most computer languages would not allow it. The potential for introducing error into your calculation in this way isn't trivial, so be precise when defining your array size!
 
-Perhaps the most interesting aspect of ````dim=```` is that you can also give it multiple values. Remember that when we want to treat multiple values as a single object, we use the ````c( )```` function.
+Perhaps the most interesting aspect of `dim=` is that you can also give it multiple values. Remember that when we want to treat multiple values as a single object, we use the `c( )` function.
 
 ````R
 # Two dimensional array
@@ -301,7 +301,7 @@ Essentially, you told R to make 6 arrays with 4 values and store them within a s
 
 We describe arrays based on the number of arrays referenced within them. A single array is a **1-dimensional array**. An array of arrays is a **2-dimensional array**. An array of arrays of arrays is a **3-dimensional array**, and so on.
 
-Incidentally, if you ever want to check the dimensions of an array, you can use the ````dim( )```` function.
+Incidentally, if you ever want to check the dimensions of an array, you can use the `dim( )` function.
 
 ````R
 # Check the dim of MyArray
@@ -319,7 +319,7 @@ Data Type | Definition
 **character** | letters, numbers, and symbols that act like letters
 **numeric** | numbers that act like numbers
 
-Type **logical** is fairly straightforward. It is simply a ````TRUE```` or ````FALSE```` value. Note, however, that R will convert ````TRUE```` to a ````1```` and ````FALSE```` to a ````O```` if you try to perform basic mathematically operations on an array of logical data.
+Type **logical** is fairly straightforward. It is simply a `TRUE` or `FALSE` value. Note, however, that R will convert `TRUE` to a `1` and `FALSE` to a `O` if you try to perform basic mathematically operations on an array of logical data.
 
 ````R
 # Create an array of logical values
