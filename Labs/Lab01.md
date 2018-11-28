@@ -1,6 +1,6 @@
 # Lab 01 - R Beginner Concepts
 
-*This tutorial was designed for [teachPaleobiology](https://github.com/aazaff/teachPaleobiology)*
+*This tutorial was designed by Andrew Zaffos for [teachPaleobiology](https://github.com/aazaff/teachPaleobiology), with some additions by Robyn Dahl for GEOL497Q/597Q*
 
 In this tutorial, you will learn the most basic concept of using the programming language R. Once you have worked through the tuorial, complete the Beginner Concepts Test to ensure your mastery of the concepts addressed here.
 
