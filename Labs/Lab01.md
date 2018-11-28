@@ -276,7 +276,15 @@ Perhaps the most interesting aspect of `dim=` is that you can also give it multi
 [4,]    1    1    1    1    1    1
 ````
 
-Essentially, you told R to make 6 arrays with 4 values and store them within a single object named **"TwoArray"**.
+Essentially, you told R to make 6 arrays with 4 values and store them within a single object named **"TwoArray"**. Notice how the array displays, with the 4x6 grid bordered by bracketed information like `[,1]` or `[3,]`. This bracketed notation describes location in the row or column, and you can specify a location in the matrix by combining the column and row description. For example, the cell in the third row of the first column would be described as `[3,1]` and you can ask for the information in that cell like this:
+
+````R
+# Ask for the information in the third row of the first column
+> TwoArray[3,1]
+[1] 0
+````
+
+You can continue adding as many dimensions as you want:
 
 ````R
 # You can do this as many times as you'd like. For example, 2 sets of 6 sets of arrays with 4 values.
