@@ -19,3 +19,21 @@ After you have created your GitHub account, you need to create a **repository** 
 5. Click the green **Create repository** button.
 
 And you're done!
+
+## Creating a New Markdown Sheet
+
+To create a new Markdown sheet in your repository, simply click the **Create new file** button near the top of your repository. This will take you to a new, blank page. Give it a name in the Markdown format (filename.md) and start typing.
+
+Be sure to commit the the new file to your repository before you navigate away from this page, or your work will not be saved. To do this, click the green **Commit new file** button at the very bottom of the page.
+
+As you make changes to your Markdown sheet, you can add descriptions to clarify what you did. This can be helpful when you're working on something complicated or if you're collaborating with other people.
+
+## Writing in Markdown
+
+Markdown sheets use their own language. Luckily, it's a pretty intuitive and easy to learn. GitHub has a great resource sheet called [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) that you can refer to for most common formatting needs.
+
+## Creating Folders in Your Repository
+
+Organizing your files in your GitHub repository is a little less intuitive. You can't just click and drag like you do in Google Drive.
+
+If you want to create a new folder, you have to use a Markdown sheet to do so. Open the Markdown sheet that you would like to move into a new folder. Click on the filename near the top of the page. For example, this page's title is `AdvancedPaleobiology/GitTutorial.md`. When you click on the title, it will become editable. Use slashes to create the name of the new folder. So, if I want a new folder called "Tutorials", I would type `\Tutorials\` before `GitTutorial.md`. This automatically creates the new folder and places this file in it.
