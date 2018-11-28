@@ -51,4 +51,21 @@ R is one of the favorite programming languages for paleontologists, because stat
 
 Let's get started! Open R Studio. It should look something like this (though the colors may be different; you can choose the color scheme!):
 
-![R Studio Screenshot](/R_Studio.png)
+![R Studio Screenshot](/Images/R_Studio.png)
+
+You will be working in the panel on the left-hand side (**Consol**) but we will sometimes refer to information or other material that will appear in some of the other panels, like the **Environment** and **Plots** panels on the right-hand side.
+
+Type something on the command line `>`
+
+What happened? It likely returned an error, something like this:
+
+````R
+> hello, world
+Error: object "hello, world" not found
+````
+
+Ok, so clearly we are not using the correct language. We'll need to start with some basic terminology. Specifically, let's talk about **objects** and **functions**. These are the two fundamental units of the R programming language. R stores information as objects and uses functions to interact with those objects. The following quote sums this up quite well:
+
+*Everything that ***exists*** *in R is an object.*
+
+*Everything that you ***do*** *in R is a function.*
