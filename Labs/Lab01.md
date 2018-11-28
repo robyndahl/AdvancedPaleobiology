@@ -417,3 +417,93 @@ Type **numeric** is both a simple and complicated data type. Basically, numeric 
 ````
 
 It returns **double** instead of **numeric**! There are actually a couple of types of numeric data, but for our uses, just consider **double** to be synonymous with **numeric** and leave it there for now.
+
+### The Third Rule of R-club
+
+***"Data! Data! Data! I cannot add letters together."
+
+As you progress with R, you will learn that keeping track of what **type** of data you are using becomes increasingly important. Most errors that beginners and intermediate useRs encounter are, on some level, a result of using the wrong data type. Therefore, one of the first things you should do when you get an error is double check tha tyou are using the right type of data.
+
+This is worth doing even if you are sure that you entered the data correctly. This is because some R functions will **coerce** (convert) your array from one data type into another without you realizing it. In most cases, this is actually a very convenient feature of R, but in other cases it can be the source of much frustration.
+
+## Vectors and Matrices as Special Arrays
+
+The majority of work done in R is either 1- or 2-dimensional. This has led to the emergence of shorthand terms. A **vector** is a 1-dimensional array and a **matrix** is a 2-dimensional array. The overwhelming majority of R users exclusively use the **vector** and **matrix** terminology rather than the n-dimensional array terminology. Importantly, no only is there a difference in terminology, there are actually separate functions that specifically use these terms.
+
+````R
+# Create a 2-dimensional array using the code we learned ealier
+> x <- array(data=c(0,1), dim=c(4,6))
+> x
+     [,1] [,2] [,3] [,4] [,5] [,6]
+[1,]    0    0    0    0    0    0
+[2,]    1    1    1    1    1    1
+[3,]    0    0    0    0    0    0
+[4,]    1    1    1    1    1    1
+
+# Compare that code to creating a matrix using the matrix( ) function
+# Notice that matrix( ) doesn't take a single dim= argument, but rather has separate arguments
+# for numer of rows (nrow) and number of columns (ncol)
+> y <- matrix(data=c(0,1), nrow=4, ncol=6)
+> y
+     [,1] [,2] [,3] [,4] [,5] [,6]
+[1,]    0    0    0    0    0    0
+[2,]    1    1    1    1    1    1
+[3,]    0    0    0    0    0    0
+[4,]    1    1    1    1    1    1
+
+# We can check if these two matrices are identical with the identical( ) function
+> identical(x,y)
+[1] TRUE
+
+# Or we can check if each value in the matrices are equal using the "==" operator
+> x == y
+     [,1] [,2] [,3] [,4] [,5] [,6]
+[1,] TRUE TRUE TRUE TRUE TRUE TRUE
+[2,] TRUE TRUE TRUE TRUE TRUE TRUE
+[3,] TRUE TRUE TRUE TRUE TRUE TRUE
+[4,] TRUE TRUE TRUE TRUE TRUE TRUE
+````
+
+Based on what you see above, you might think that you've deduced the appropriate function to create a vector, but `vector( )` doesn't work!
+
+````R
+> z <- vector(data=c(1,2,3,4), dim=4)
+Error in vector(data = c(1, 2, 3, 4), dim = 4) : 
+  unused arguments (data = c(1, 2, 3, 4), dim = 4)
+````
+
+Even though vectors are *conceptually identical* to a 1-dimensional array, they are not operationally identical. Instead, you make a vector by using the `c( )` function we've been using all along.
+
+````R
+# Make a vector
+> MyVector <- c(1,2,3,4)
+> MyVector
+[1] 1 2 3 4
+
+# You can check what type of array something is by using the is() function
+> is(MyVector,"vector")
+[1] TRUE
+
+# You can also convert between different types of class by using the as( ) function.
+# Be warned that not all classes can be converted to other classes in this way.
+> as(MyVector,"array")
+
+# Let's test if the 1-D array, MyArray, is identical with the previous vector, MyVector.
+> identical(MyVector,MyArray)
+[1] FALSE
+
+# Similarly, dim( ) will not work on a vector.
+> dim(MyVector)
+NULL
+	
+# You have to use the special function length( )
+>length(MyVector)
+[1] 4
+````
+
+If you look carefully at how we define arrays, you will notice that we need to first create a vector using the function `c( )` - e.g., `MyArray <- array(c(1,2,3,4),4)`. Generally, vectors are used more often than 1-dimensional arrays because vectors are more fundamental. So, be careful as to whether you are using **vectors**, **matrices**, or **arrays**.
+# Let's make a 1-dimensional array
+> MyArray <- array(c(1,2,3,4),4)
+> MyArray
+[1] 1 2 3 4
+
