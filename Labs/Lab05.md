@@ -21,4 +21,4 @@ The Osteostraci, or osteostracans, are a major clade (about 200 species) of foss
 
 **Step 1:** Download the osteostracan skull photo set from Canvas. This .zip file contains skull diagrams of 30 different Osteostracan species, which you will be collecting landmark data from. Save this folder on your desktop. Spend a few minutes reviewing the diagrams so that you are familiar with the range of variation among species.
 
-**Step 2:** Use FIJI to collect your landmark data. To do this, open the first image in the folder in FIJI. Use the multipoint collector tool to place landmarks on the skull. You can use the image below as a guide or decide on your own landmark positions. *Be sure to place the landmarks in the same spots and order for each image!*
+**Step 2:** Use [FIJI](https://fiji.sc/) to collect your landmark data. To do this, open the first image in the folder in FIJI. Use the multipoint collector tool to place landmarks on the skull. You can use the image below as a guide or decide on your own landmark positions. *Be sure to place the landmarks in the same spots and order for each image!*
