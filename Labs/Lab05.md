@@ -1,5 +1,7 @@
 # Lab 05 - Introduction to Morphometrics
 
+**Acknowledgement:** This lab is adapted from activities in David Polly's [Geometric Morphometrics](http://www.indiana.edu/~g562/) course
+
 ## Table of Contents
 
 + [Pre-lab reading assignment](#pre-lab-reading-assignment)
