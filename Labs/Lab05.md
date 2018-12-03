@@ -40,6 +40,26 @@ We need to format this spreadsheet so that it can be saved as a `.tps` file that
 
 To save this as a `.tps` file, highlight the two columns your coordinate data (columns F & G in the example picture) and copy. In Word, use `Paste Special` to paste the data as **unformatted text**. Some programs don't like tab characters, which are inserted by default when you paste from Excel. Remove them with `Edit > Find > Advanced Replace` and `Replace`. To do this, click the arrow in the lower left to show options. Click the "replace" tab at the top to open both Find and Replace input bars. Enter `^t` in the "Find What" bar and enter a single space in the "Replace With" bar. Click `Replace All`.
 
-Save your file as **plain text**.
+Save your file as **plain text** in the r directory on the computer you are working on.
 
-**Step 4** Now we will use the `geomorph` R package to analyze our landmark data. You may want to review Adams & Otarola-Castillo (2013) *geomorph: an R package for the collection and analysis of geometric mophometric shape data* before starting. Open R Studio and load `geomorph` using `install.packages("geomorph")`.
+**Step 4** Now we will use the `geomorph` R package to analyze our landmark data. You may want to review Adams & Otarola-Castillo (2013) *geomorph: an R package for the collection and analysis of geometric mophometric shape data* and Sherratt (2014) *Quick Guide to geomorph v2.0* before starting.
+
+Open R Studio and complete the following:
+
+````R
+# install geomorph
+> install.packages("geomorph")
+
+# load geomorph
+> library("geomorph")
+
+# load your .tps file
+> osteostracans <- readland.tps("osteostracans.tps", specID = "ID")
+
+# view your .tps file
+> osteostracans
+
+# check the number of dimensions in your data
+> dim(osteostracans)
+> [1] 13  2 29 # osteostracans has 3 dimension
+````
