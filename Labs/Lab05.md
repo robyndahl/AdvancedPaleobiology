@@ -61,5 +61,5 @@ Open R Studio and complete the following:
 
 # check the number of dimensions in your data
 > dim(osteostracans)
-> [1] 13  2 29 # osteostracans has 3 dimension
+> [1] 13  2 29 # osteostracans has 3 dimensions
 ````
