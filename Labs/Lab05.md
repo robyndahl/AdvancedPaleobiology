@@ -37,3 +37,5 @@ To collect your landmark data, open the first image in the folder in FIJI. Use t
 We need to format this spreadsheet so that it can be saved as a `.tps` file that can be used by the `geomorph` R package. To do this, insert blank rows before and after the block of rows for each specimen. Above the x-coordinate, enter the text `LM=` followed by the number of landmarks you collected for the specimen (e.g., `LM=13`). Below the x-coordinate, enter the text `ID=` follwed by the taxon name (e.g., `ID=Steogosaurus`). Your spreadsheet should end up looking something like this:
 
 ![Lab05_Fig2](/Images/Lab05_Fig2.png)
+
+To save this as a `.tps` file, highlight the two columns your coordinate data (columns F & G in the example picture) and copy. In Word, use `Paste Special` to paste the data as **unformatted text**. 
