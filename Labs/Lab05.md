@@ -19,7 +19,7 @@ From the [*Tree of Life*](http://tolweb.org/Osteostraci)
 
 The Osteostraci, or osteostracans, are a major clade (about 200 species) of fossil, armored jawless vertebrates which lived from the Early Silurian (about 430 million years) to the Late Devonian (about 370 million years). Most of them have a characteristic horseshoe-shaped head, which consists of a massive endoskeletal skull, covered with a shield of dermal bone. On the dorsal surface of the head are the closely-sat eyes, a pineal foramen, and a medium, keyhole-shaped nasophypophysial openening. In addition, there are peculiar "fields" (in fact, depressions of the braincase, covered with loose platelets of dermal bone), which have been regarded as either sense organs or electric organs. The mouth and gill openings are, like the Galeaspida, situated on the ventral side of the head. Osteostracans also have large, pad-shaped paired fins. Most osteostracans are about 20 to 40 cm in total length, but some species could be extremely small (about 4 cm in length). The largest species was about one meter in length.
 
-**Step 1:** Download the osteostracan skull photo set from Canvas. This .zip file contains skull diagrams of 30 different Osteostracan species, which you will be collecting landmark data from. Save this folder on your desktop. Spend a few minutes reviewing the diagrams so that you are familiar with the range of variation among species.
+**Step 1:** Download the osteostracan skull photo set from Canvas. This `.zip` file contains skull diagrams of 30 different Osteostracan species, which you will be collecting landmark data from. Save this folder on your desktop. Spend a few minutes reviewing the diagrams so that you are familiar with the range of variation among species.
 
 **Step 2:** Use [FIJI](https://fiji.sc/) to collect your landmark data. But first, some things to remember about collecting landmarks (from [David Polly](http://www.indiana.edu/~g562/Handouts/Collecting%20Landmarks.pdf):
 
@@ -32,4 +32,6 @@ To collect your landmark data, open the first image in the folder in FIJI. Use t
 
 ![landmarks](/Images/landmarks.png)
 
-**Step 3:** When you have collected landmark data for all of the images, copy and paste the data from the FIJI measurements into Excel. 
+**Step 3:** When you have collected landmark data for all of the images, copy and paste the data from the FIJI measurements into Excel. Remember, we don't care about the first five columns of data, so you can deleted those columns.
+
+We need to format this spreadsheet so that it can be saved as a `.tps` file that can be used by the `geomorph` R package. To do this, insert blank rows before and after the block of rows for each specimen. Above the x-coordinate, enter the text `LM=` followed by the number of landmarks you collected for the specimen (e.g., `LM=13`). Below the x-coordinate, enter the text `ID=` follwed by the taxon name (e.g., `ID=Steogosaurus`).
