@@ -42,7 +42,7 @@ To save this as a `.tps` file, highlight the two columns your coordinate data (c
 
 Save your file as **plain text** in the r directory on the computer you are working on.
 
-**Step 4** Now we will use the `geomorph` R package to analyze our landmark data. You may want to review Adams & Otarola-Castillo (2013) *geomorph: an R package for the collection and analysis of geometric mophometric shape data* and Sherratt (2014) *Quick Guide to geomorph v2.0* before starting.
+**Step 4:** Now we will use the `geomorph` R package to analyze our landmark data. You may want to review Adams & Otarola-Castillo (2013) *geomorph: an R package for the collection and analysis of geometric mophometric shape data* and Sherratt (2014) *Quick Guide to geomorph v2.0* before starting.
 
 Open R Studio and complete the following:
 
@@ -63,3 +63,53 @@ Open R Studio and complete the following:
 > dim(osteostracans)
 > [1] 13  2 29 # osteostracans has 3 dimensions
 ````
+Great, now your data is loaded and ready to be analyzed! The first analysis we want to conduct is a **Generalized Procrustes Analysis** or GPA. Here is an GPA explainer from Sherratt (2014):
+
+*Generalized Procrustes Analysis (GPA: Gower 1975; Rohlf and Slice 1990) is the primary means by which shape variables are obtained from landmark data. GPA translates all specimens to the origin, scales them to unit-centroid size, and optimally rotates them (using a least-squares criterion) until the coordinates of corresponding points align as closely as possible. The resulting aligned Procrustes coordinates represent the shape of each specimen, and are found in a curved space related to Kendall's shape space (Kendall 1984). Typically, these are projected into a linear tangent space yielding Kendall's tangent space coordinates (Dyrden and Mardia 1993; Rohlf 1999), which are used for subsequent multivariate analyses.*
+
+To conduct a GPA on your data, complete the following:
+
+````R
+# pick a name for your new function, something descriptive like "osteoGPA"
+> osteoGPA <- gpagen(osteostracans)
+
+# take a look at the GPA results
+> osteoGPA
+
+Call:
+gpagen(A = osteostracans) 
+
+
+
+Generalized Procrustes Analysis
+with Partial Procrustes Superimposition
+
+13 fixed landmarks
+0 semilandmarks (sliders)
+2-dimensional landmarks
+2 GPA iterations to converge
+
+
+Consensus (mean) Configuration
+
+                X            Y
+ [1,]  0.39189606 -0.016822253
+ [2,]  0.11413319 -0.005343057
+ [3,]  0.03656083 -0.001659035
+ [4,] -0.14014476  0.007332923
+ [5,] -0.26612769  0.014346020
+ [6,] -0.24769728 -0.390110028
+ [7,] -0.13333639 -0.267753873
+ [8,]  0.24169427 -0.083500449
+ [9,]  0.03254271 -0.056690595
+[10,]  0.03766768  0.053135477
+[11,]  0.24603325  0.058587919
+[12,] -0.10576190  0.277486630
+[13,] -0.20745997  0.410990320
+
+# plot the GPA
+> plot(osteoGPA)
+````
+Examine the plot. What is information does it visualize?
+
+**Step 5:** Now we will use `geomorph` to conduct a **Principal Components Analysis** or PCA. 
