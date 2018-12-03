@@ -30,4 +30,6 @@ The Osteostraci, or osteostracans, are a major clade (about 200 species) of foss
 
 To collect your landmark data, open the first image in the folder in FIJI. Use the multipoint collector tool to place landmarks on the skull. You can use the image below as a guide or decide on your own landmark positions When you have placed all of your points, use CTRL-M to record them in the measurement window (a spreadsheet that will populate with all of your data as you collect from each image). When you are done with your first image, use CTRL-SHIFT-O to open the next image. Repeat until you have collected landmark data from all 30 images.
 
+![landmarks](/Images/landmarks.png)
+
 **Step 3:**
