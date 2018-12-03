@@ -30,8 +30,10 @@ The Osteostraci, or osteostracans, are a major clade (about 200 species) of foss
 
 To collect your landmark data, open the first image in the folder in FIJI. Use the multipoint collector tool to place landmarks on the skull. You can use the image below as a guide or decide on your own landmark positions When you have placed all of your points, use CTRL-M to record them in the measurement window (a spreadsheet that will populate with all of your data as you collect from each image). FIJI will collected more information than we are interested in, and you don't need to pay any attention to the first four columns on the sheet (`Area, Mean, Min, Max`). We are only interested in the cartesian coordinates of our landmarks (`X, Y`). When you are done with your first image, use CTRL-SHIFT-O to open the next image. Repeat until you have collected landmark data from all 30 images.
 
-![landmarks](/Images/landmarks.png)
+![Lab05_Fig1](/Images/Lab05_Fig1.png)
 
-**Step 3:** When you have collected landmark data for all of the images, copy and paste the data from the FIJI measurements into Excel. Remember, we don't care about the first five columns of data, so you can deleted those columns.
+**Step 3:** When you have collected landmark data for all of the images, copy and paste the data from the FIJI measurements into Excel. Remember, we don't care about the first five columns of data, so you can ignore those columns.
 
-We need to format this spreadsheet so that it can be saved as a `.tps` file that can be used by the `geomorph` R package. To do this, insert blank rows before and after the block of rows for each specimen. Above the x-coordinate, enter the text `LM=` followed by the number of landmarks you collected for the specimen (e.g., `LM=13`). Below the x-coordinate, enter the text `ID=` follwed by the taxon name (e.g., `ID=Steogosaurus`).
+We need to format this spreadsheet so that it can be saved as a `.tps` file that can be used by the `geomorph` R package. To do this, insert blank rows before and after the block of rows for each specimen. Above the x-coordinate, enter the text `LM=` followed by the number of landmarks you collected for the specimen (e.g., `LM=13`). Below the x-coordinate, enter the text `ID=` follwed by the taxon name (e.g., `ID=Steogosaurus`). Your spreadsheet should end up looking something like this:
+
+![Lab05_Fig2](/Images/Lab05_Fig2.png)
