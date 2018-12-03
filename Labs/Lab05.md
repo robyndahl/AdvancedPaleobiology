@@ -21,4 +21,13 @@ The Osteostraci, or osteostracans, are a major clade (about 200 species) of foss
 
 **Step 1:** Download the osteostracan skull photo set from Canvas. This .zip file contains skull diagrams of 30 different Osteostracan species, which you will be collecting landmark data from. Save this folder on your desktop. Spend a few minutes reviewing the diagrams so that you are familiar with the range of variation among species.
 
-**Step 2:** Use [FIJI](https://fiji.sc/) to collect your landmark data. To do this, open the first image in the folder in FIJI. Use the multipoint collector tool to place landmarks on the skull. You can use the image below as a guide or decide on your own landmark positions. *Be sure to place the landmarks in the same spots and order for each image!*
+**Step 2:** Use [FIJI](https://fiji.sc/) to collect your landmark data. But first, some things to remember about collecting landmarks (from [David Polly](http://www.indiana.edu/~g562/Handouts/Collecting%20Landmarks.pdf):
+
++ Each image must have the same number of landmarks
++ The landmarks on each image image must be collected in the same order
++ Landmarks are ordinarily placed on homologous points, points that can be replicated from object to object based on common morphology, common function, or common geometry
++ You may have to flip some images so that they are not reversed left to right (e.g., if most of your images show the right side, flip left side images so that they mimic the right side)
+
+To collect your landmark data, open the first image in the folder in FIJI. Use the multipoint collector tool to place landmarks on the skull. You can use the image below as a guide or decide on your own landmark positions When you have placed all of your points, use CTRL-M to record them in the measurement window (a spreadsheet that will populate with all of your data as you collect from each image). When you are done with your first image, use CTRL-SHIFT-O to open the next image. Repeat until you have collected landmark data from all 30 images.
+
+**Step 3:**
