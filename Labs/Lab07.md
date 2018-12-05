@@ -82,6 +82,15 @@ Return to the PBDB splash page, and select the **Navigator** tool. This tool is 
 Once you have familiarized yourself with the page, search for the genus *Abra*. *Abra* is a genus of bivalve.
 
 1. Zoom in so that you can see from Texas to Florida and from Florida to New York. Some of the occurrences are orange and others are yellow. What is the significance of the different colors?
+
 2. Zoom back out. Add an additioanl filter to the search bar, the Ypresian stage. The Ypresian is a time interval ranging from 47.8-56.0 million years ago. In what countries are there Ypresian occurrences of *Abra*?
+
 3. Clear the *Abra* and Ypresian filters from the search. Look for the genus *Ambonychia* (another genus of bivalve). Within the United States, find the city with the most occurrences of *Ambonychia*. What is the name of this city?
+
 4. What age (Period) are most *Ambonychia* occurrences?
+
+Add your answer to Question 4 as an additional filter. Click the little icon on South America breaking away from Africa on the left side of the screen. This icon rotates the continents back to their position in the specified time-period. **Note that it requires you to set a specific time period as a filter**.
+
+5. During this time period, were most occurrences of *Ambonychia* arrayed parallel or perpendicular to the equator?
+
+6. Click on the little insect icon on the left side of the screen. This brings up taxonomic information about the target taxon. What order does *Ambonychia* belong to?
