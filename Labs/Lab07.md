@@ -101,9 +101,11 @@ Add your answer to Question 4 as an additional filter. Click the little icon on 
 
 ## Downloading Data
 
-You can download the data displayed in your Navigator window using the little arrow icon on the left side of teh screen, but its options are limited.
+You can download the data displayed in your Navigator window using the little arrow icon on the left side of the screen, but its options are limited.
 
 To customize the data that you want, use the more detailed download form. To find this form, return to the splash page and click **Download Data**. This download form uses the PBDB API. Once you are more familiar with the PBDB and R, you will be able to download data direclty into R using the API, and you will no longer have to use to the Navigator or the download form.
+
+![Lab07_Fig3](/Images/Lab07_Fig3.png)
 
 From the download form, we can download all collections of both *Abra* and *Ambonychia* as a tab-separated file. To do this:
 
