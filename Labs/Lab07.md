@@ -28,3 +28,18 @@ The PBDB splash page has a lot of information packed into it. At the bottom of t
 All data in the PBDB can ultimately be traced back to one or more references. You can search through references in the PBDB using the **Search** menu at the top of the spash page. Select `Search > Published references` to navigate to the reference search form:
 
 ![Lab07_Fig2](/Images/Lab07_Fig2.png)
+
+**Exercise 1 Questions**
+
+Let's use the folowing paper as an example (which you can find on Canvas):
+
+Holland, S. M. and M. E. Patzkowsky. 2007. Gradient ecology of a biotic invasion: Biofacies of the type Cincinnatian series (Upper Ordovician), Cincinnati, Ohio Region, USA. Palaios, 22:392-407.
+
+Use the reference tool to look up collections associated with this paper, then answer the following questions.
+
+1. How many collections are associated with this reference?
+2. What is the reference ID number for the article?
+
+Once you have answered the above questions, click the `view collections` hyperlink at the bottom of the page to see all the collections associated with this study. Click to view **Collection No. 72438**, then answer the following questions:
+
+3. The first two taxa in the taxonomic list are bryozoans, and the third taxon listed is *Rafinesquina alternata*. Next to the taxonomic name is the citation (Conrad 1830). 
