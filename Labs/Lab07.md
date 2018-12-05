@@ -2,6 +2,18 @@
 
 *This lab is based on the [Lab Exercise 3](https://github.com/aazaff/teachPaleobiology/blob/master/LabExercise3.md) for [teachPaleobiology](https://github.com/aazaff/teachPaleobiology)
 
+## Table of Contents
+
++ [Instructions](#instructions)
++ [Finding the Paleobiology Database](#finding-the-paleobiology-database)
++ [References](#references)
++ [Collections](#collections)
++ [Occurrences](#occurrences)
++ [Downloading Data](#downloading-data)
++ [Paleobiology Database API](#paleobiology-database-api)
++ [Writing Your Own API Function in R](#writing-your-own-api-function-in-r)
++ [Morphologic Measurements](#morphologic-measurements)
+
 ## Instructions
 
 Complete the following lab exercise and submit your answers as a GitHub markdown file to your personal GitHub repository by February, 14, 2019. Post a link to the file in the Lab 07 Assignment on Canvas.
@@ -46,3 +58,15 @@ Once you have answered the above questions, click the `view collections` hyperli
 4. In what county was the data collected?
 5. What age (Period) is the data from?
 6. What is the name of the geologic formation that the data was collected from?
+
+## Collections
+
+Collections are useful for getting additional information about the age, location, and geologic content of collected fossils. They are, however, generally a poor tool for data analysis. This is because there is no standard operational definition of a collection in the PBDB.
+
+For example, collection no. **72438** from the previous example represents a single sample from the study by Holland & Patzkowsky. In that study, a sample represents a single *bedding plane* (i.e., the top of a single rock layer) between 100 cm<sup>2</sup> and 1600 cm<sup>2</sup> in size.
+
+In contrast, collection no. **91240** represents a single sample in a study by Ivany et al. (2009), Ref#30540. In that study, a sample was defined as an entire rock outcrop (multiple beds), generally several square meters in extent.
+
+If you blindly compared these two collections, you would be making an apples to oranges comparison.
+
+## Occurrences
