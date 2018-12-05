@@ -50,13 +50,17 @@ Holland, S. M. and M. E. Patzkowsky. 2007. Gradient ecology of a biotic invasion
 Use the reference tool to look up collections associated with this paper, then answer the following questions.
 
 1. How many collections are associated with this reference?
+
 2. What is the reference ID number for the article?
 
 Once you have answered the above questions, click the `view collections` hyperlink at the bottom of the page to see all the collections associated with this study. Click to view **Collection No. 72438**, then answer the following questions:
 
 3. The first two taxa in the taxonomic list are bryozoans, and the third taxon listed is *Rafinesquina alternata*. Next to the taxonomic name is the citation (Conrad 1830). What is the *class, family, genus* and *species* of the fourth taxon in the taxonomic list?
+
 4. In what county was the data collected?
+
 5. What age (Period) is the data from?
+
 6. What is the name of the geologic formation that the data was collected from?
 
 ## Collections
@@ -94,3 +98,20 @@ Add your answer to Question 4 as an additional filter. Click the little icon on 
 5. During this time period, were most occurrences of *Ambonychia* arrayed parallel or perpendicular to the equator?
 
 6. Click on the little insect icon on the left side of the screen. This brings up taxonomic information about the target taxon. What order does *Ambonychia* belong to?
+
+## Downloading Data
+
+You can download the data displayed in your Navigator window using the little arrow icon on the left side of teh screen, but its options are limited.
+
+To customize the data that you want, use the more detailed download form. To find this form, return to the splash page and click **Download Data**. This download form uses the PBDB API. Once you are more familiar with the PBDB and R, you will be able to download data direclty into R using the API, and you will no longer have to use to the Navigator or the download form.
+
+From the download form, we can download all collections of both *Abra* and *Ambonychia* as a tab-separated file. To do this:
+
++ Select `Collections`
++ Select `Tab-separated values (tsv)`
++ Enter `Abra, Ambonychia` into the taxon textbar
++ Click the `Test` button in the middle of the page. This open a new window that displays your data. Close that window to return to the download form, which should now show a blue URL describing your data request above the `Test` and `Download` buttons
+
+The URL should look like this:
+
+[https://paleobiodb.org/data1.2/colls/list.tsv?datainfo&rowcount&base_name=Abra,Ambonychia](https://paleobiodb.org/data1.2/colls/list.tsv?datainfo&rowcount&base_name=Abra,Ambonychia)
