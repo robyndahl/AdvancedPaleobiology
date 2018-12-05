@@ -117,3 +117,29 @@ From the download form, we can download all collections of both *Abra* and *Ambo
 The URL should look like this:
 
 [https://paleobiodb.org/data1.2/colls/list.tsv?datainfo&rowcount&base_name=Abra,Ambonychia](https://paleobiodb.org/data1.2/colls/list.tsv?datainfo&rowcount&base_name=Abra,Ambonychia)
+
+**Exercise Questions Part 3**
+
+For the following questions, generate the appropriate URL for the following data queries:
+
+1. All occurrences of *Ambonychia* in the Lexington Limestone as a JSON
+
+2. All occurrences of mammals present in the Paleocene through Oligocene epochs as a csv
+
+3. All opinions on the order Testudines in the Mesozoic
+
+4. All collections of Aves, Marsupialia, and Sirenia in the United States as a csv
+
+5. All occurrences of the gastropod genus *Ficus* as a csv
+
+The next set of problems is free form, in that you can find the answers using any of the PBDB tools discussed so far.
+
+6. What family does the genus *Gastrocopta* belong to?
+
+7. There is only one occurrence of *Isoetes* in Portugal. What age is it?
+
+8. What is the age of the oldest occurrence of *Gastrocopta*?
+
+9. There is only one occurrence of *Tiktaalik* in the PBDB. Was that occurrence located in the tropics or the extratropics when that organism was alive?
+
+10. There are two occurrences of *Namacalathus* in Siberia. What geologic formations are they found in?
