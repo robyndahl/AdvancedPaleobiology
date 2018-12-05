@@ -143,3 +143,15 @@ The next set of problems is free form, in that you can find the answers using an
 9. There is only one occurrence of *Tiktaalik* in the PBDB. Was that occurrence located in the tropics or the extratropics when that organism was alive?
 
 10. There are two occurrences of *Namacalathus* in Siberia. What geologic formations are they found in?
+
+## Paleobiology Database API
+
+The acronym API stands for Application Programming Interface. Technical definitions aside, it is a way for users to access data stored in an online database through web addresses (URLs). Companies that store a lot of data (e.g., Google, Twitter, Facebook) make API's available so that 3rd party developers can use their data to make applications. For example, if you've ever played a Facebook game (e.g., Candy Crush, Farmville), those programs were accessing information about you and your friends through the API.
+
+The best way to think about using an API is to imagine it as a map to all the data stored online. You need to use this map to give the computer directions on how to find the particular data you want and access it. When we give directions to a location in the real world, we generally do so in two ways. We either give geographic coordinates (i.e., latitude, longitude, elevation) that specify the destination, or a set of routes to get somewhere (e.g., Take I-90 S to Everett, then US-2 W to Leavenworth).
+
+When we access data in R via **subscripting** `Object[ ]`, we are using a coordinate system to point out the data in our object. In contrast, when we access data through an API, we are defining a **route**. In fact, route is the formal terminology. Depending on the size of an API, there may be dozens of routes, which may feel overwhelming at first. However, remember that a car map has thousands or hundreds of thousands of roads, most of which you will never travel on, but you still need to know how to use the map to get where you're going. It's the same with an API.
+
+Let's deconstruct a specific API **query** (i.e., URL):
+
+![Lab07_Fig4](/Images/Lab07_Fig4.png)
