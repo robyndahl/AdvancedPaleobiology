@@ -192,7 +192,7 @@ Your final product should look like this:
 
 ````R
 # Download all instances of the genus Abra from the Pleistocene interval
-AbraData<-downloadPBDB(taxon="Abra",interval="Pleistocene")
+AbraData <- downloadPBDB(taxon="Abra",interval="Pleistocene")
 
 # Your output should look like this
 AbraData[1:6,1:6]
@@ -205,7 +205,7 @@ AbraData[1:6,1:6]
 6        427901         occ      NA    NA         41740   Abra aequalis
 
 # Download all instances of the genus Tyrannosaurus from the Mesozoic
-TRexData<-downloadPBDB(taxon="Tyrannosaurus",interval="Mesozoic")
+TRexData <- downloadPBDB(taxon="Tyrannosaurus",interval="Mesozoic")
 
 # Your output shoud look like this
 TRexData[1:6,1:6]
@@ -234,8 +234,8 @@ paste("We","Love","R",sep="!")
 [1] "We!Love!R"
 
 # Example 4
-LoveR<-c("We Love R")
-HateR<-c("We Hate R")
+LoveR <- c("We Love R")
+HateR <- c("We Hate R")
 paste(LoveR,HateR,sep=" >> ")
 [1] "We Love R >> We Hate R"
 ````
