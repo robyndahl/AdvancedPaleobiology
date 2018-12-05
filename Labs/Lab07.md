@@ -42,4 +42,7 @@ Use the reference tool to look up collections associated with this paper, then a
 
 Once you have answered the above questions, click the `view collections` hyperlink at the bottom of the page to see all the collections associated with this study. Click to view **Collection No. 72438**, then answer the following questions:
 
-3. The first two taxa in the taxonomic list are bryozoans, and the third taxon listed is *Rafinesquina alternata*. Next to the taxonomic name is the citation (Conrad 1830). 
+3. The first two taxa in the taxonomic list are bryozoans, and the third taxon listed is *Rafinesquina alternata*. Next to the taxonomic name is the citation (Conrad 1830). What is the *class, family, genus* and *species* of the fourth taxon in the taxonomic list?
+4. In what county was the data collected?
+5. What age (Period) is the data from?
+6. What is the name of the geologic formation that the data was collected from?
