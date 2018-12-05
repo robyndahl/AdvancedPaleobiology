@@ -181,3 +181,64 @@ https://paleobiodb.org/data1.2/colls/list.csv?base_name=Mammut&interval=Pliocene
 5. Look through the service doumentation for the appropriate route (based on your answer to Question 2). Find out how to extend the age search range from the Miocene Epoch through the Pleistocene Epoch. Give the new data query URL.
 
 6. What URL would you use to show the paleocoordinates (i.e., paleolatitude and paleolongitude) of each data point?
+
+## Writing Your Own API Function in R
+
+Wouldn't it be really convenient if, instead of typing out the URL every time, you could just write an R function that takes a specific taxon name and interval and downloads the data directly into R?
+
+Specifically, your final question for this lab is the write a function in R that will take as its arguments a **taxon name** and an **interval** and download all fossil occurrences from the PBDB as a csv.
+
+Your final product should look like this:
+
+````R
+# Download all instances of the genus Abra from the Pleistocene interval
+AbraData<-downloadPBDB(taxon="Abra",interval="Pleistocene")
+
+# Your output should look like this
+AbraData[1:6,1:6]
+  occurrence_no record_type reid_no flags collection_no identified_name
+1         94761         occ      NA    NA          7108   Abra aequalis
+2        256368         occ      NA    NA         20604   Abra aequalis
+3        256386         occ      NA    NA         20606   Abra aequalis
+4        425385         occ      NA    NA         41501   Abra aequalis
+5        427341         occ      NA    NA         41705   Abra aequalis
+6        427901         occ      NA    NA         41740   Abra aequalis
+
+# Download all instances of the genus Tyrannosaurus from the Mesozoic
+TRexData<-downloadPBDB(taxon="Tyrannosaurus",interval="Mesozoic")
+
+# Your output shoud look like this
+TRexData[1:6,1:6]
+  occurrence_no record_type reid_no flags collection_no       identified_name
+1        139292         occ   22878    NA         11917     Tyrannosaurus rex
+2        139293         occ      NA    NA         11918 Tyrannosaurus cf. rex
+3        219998         occ      NA    NA         22654     Tyrannosaurus rex
+4        220009         occ      NA    NA         22657     Tyrannosaurus rex
+5        280101         occ      NA    NA         26760     Tyrannosaurus rex
+6        291021         occ      NA    NA         14640 Tyrannosaurus cf. rex
+````
+
+In order to achieve this, you will need to use the `paste( )` function. Here are some examples of the paste function. See if you can figure out how it fits into the problem.
+
+````R
+# Example 1
+paste("We","Love","R",sep=" ")
+[1] "We Love R"
+
+# Example 2
+paste("We","Love","R",sep="")
+[1] "WeLoveR"
+
+# Example 3
+paste("We","Love","R",sep="!")
+[1] "We!Love!R"
+
+# Example 4
+LoveR<-c("We Love R")
+HateR<-c("We Hate R")
+paste(LoveR,HateR,sep=" >> ")
+[1] "We Love R >> We Hate R"
+````
+**Exercise Questions Part 5**
+
+1. Write an R function that will take a taxonomic name (as a character string) and an interval (as a character string) as its argument, and will download all fossil occurrences in R. See above.
