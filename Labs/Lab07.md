@@ -10,6 +10,8 @@ Complete the following lab exercise and submit your answers as a GitHub markdown
 
 The URL for the Paleobiology Database (PDBD) is [www.paleobiodb.org](https://paleobiodb.org/). Open the PBDB in another web brower window. The first thing you should see is the **SPLASH** page:
 
+![Lab07_Fig1](/Images/Lab07_Fig1.png)
+
 The PBDB splash page has a lot of information packed into it. At the bottom of the screen, you will see some basic stats on the types and quantity of data located in the database.
 
 **Data Type** | **Definition**
