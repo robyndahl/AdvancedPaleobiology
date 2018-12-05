@@ -155,3 +155,29 @@ When we access data in R via **subscripting** `Object[ ]`, we are using a coordi
 Let's deconstruct a specific API **query** (i.e., URL):
 
 ![Lab07_Fig4](/Images/Lab07_Fig4.png)
+
+The first half of the query, before the **?**, is pretty straightforward because there are only a few possible variations. However, the **parameters** that come afterwards can become quite cumbersome because there are many varieties of them, and many of them will change depending on what type of data you are using (i.e., collections vs. occurrences). You will need to use the documentation to see a full list of parameters.
+
++ [Occurrence Parameters](https://paleobiodb.org/data1.2/occs/list_doc.html)
++ [Collections Parameters](https://paleobiodb.org/data1.2/colls/list_doc.html)
++ [References Parameters](https://paleobiodb.org/data1.2/refs/list_doc.html)
++ [Opinions Parameters](https://paleobiodb.org/data1.2/opinions/list_doc.html)
++ [Specimens Parameters](https://paleobiodb.org/data1.2/specs/list_doc.html)
+
+**Exercise Questions Part 4**
+
+1. In your morphometrics lab, you downloaded a csv file of ammonite sizes from a GitHub URL directly into R. What code would you use to download the following PBDB data directly into R?
+
+````R
+https://paleobiodb.org/data1.2/colls/list.csv?base_name=Mammut&interval=Pliocene
+````
+
+2. Download the data from the URL above into R. What are its dimensions?
+
+3. Did the above call use the occurrences, collections, references, opinions, or specimens route?
+
+4. What genus is being called for? What is its colloquial name? What age was the call limited to?
+
+5. Look through the service doumentation for the appropriate route (based on your answer to Question 2). Find out how to extend the age search range from the Miocene Epoch through the Pleistocene Epoch. Give the new data query URL.
+
+6. What URL would you use to show the paleocoordinates (i.e., paleolatitude and paleolongitude) of each data point?
