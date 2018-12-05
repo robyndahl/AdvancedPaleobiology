@@ -41,7 +41,7 @@ All data in the PBDB can ultimately be traced back to one or more references. Yo
 
 ![Lab07_Fig2](/Images/Lab07_Fig2.png)
 
-**Exercise 1 Questions**
+**Exercise Questions Part 1**
 
 Let's use the folowing paper as an example (which you can find on Canvas):
 
@@ -70,3 +70,18 @@ In contrast, collection no. **91240** represents a single sample in a study by I
 If you blindly compared these two collections, you would be making an apples to oranges comparison.
 
 ## Occurrences
+
+Occurrences are the number of collections that contain a taxon. Since the size and definition of collections is variable, the meaning of occurrences is also somewhat imprecise.
+
+Therefore, as we progress in this course, you will see that oftentimes the first step of any data analysis project using the PBDB is to reorganize occurrences into a more sensible and standardized format. We will discuss occurrences more when discussing how to download data.
+
+**Exercise Questions Part 2**
+
+Return to the PBDB splash page, and select the **Navigator** tool. This tool is the best way to visualize the age and location of collections in the PBDB. Take a few minutes to orient yourself to the navigator page. Explore the timescale along the bottom, or search for different fossil groups using the search bar at the top. Zoom in closer to different continents, or view the continents in different paleogeographic orientations.
+
+Once you have familiarized yourself with the page, search for the genus *Abra*. *Abra* is a genus of bivalve.
+
+1. Zoom in so that you can see from Texas to Florida and from Florida to New York. Some of the occurrences are orange and others are yellow. What is the significance of the different colors?
+2. Zoom back out. Add an additioanl filter to the search bar, the Ypresian stage. The Ypresian is a time interval ranging from 47.8-56.0 million years ago. In what countries are there Ypresian occurrences of *Abra*?
+3. Clear the *Abra* and Ypresian filters from the search. Look for the genus *Ambonychia* (another genus of bivalve). Within the United States, find the city with the most occurrences of *Ambonychia*. What is the name of this city?
+4. What age (Period) are most *Ambonychia* occurrences?
