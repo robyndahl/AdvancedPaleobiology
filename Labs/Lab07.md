@@ -168,7 +168,7 @@ The first half of the query, before the **?**, is pretty straightforward because
 
 1. In your morphometrics lab, you downloaded a csv file of ammonite sizes from a GitHub URL directly into R. What code would you use to download the following PBDB data directly into R?
 
-````R
+````
 https://paleobiodb.org/data1.2/colls/list.csv?base_name=Mammut&interval=Pliocene
 ````
 
