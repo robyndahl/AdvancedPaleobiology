@@ -12,7 +12,6 @@
 + [Downloading Data](#downloading-data)
 + [Paleobiology Database API](#paleobiology-database-api)
 + [Writing Your Own API Function in R](#writing-your-own-api-function-in-r)
-+ [Morphologic Measurements](#morphologic-measurements)
 
 ## Instructions
 
