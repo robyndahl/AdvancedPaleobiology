@@ -25,4 +25,6 @@ The PBDB splash page has a lot of information packed into it. At the bottom of t
 
 ## References
 
-All data in the PBDB can ultimately be traced back to one or more references. You can search through references in the PBDB using the **Search** menu at the top of the spash page. Select `Search > Published references` to navigate to the reference search form.
+All data in the PBDB can ultimately be traced back to one or more references. You can search through references in the PBDB using the **Search** menu at the top of the spash page. Select `Search > Published references` to navigate to the reference search form:
+
+![Lab07_Fig2](/Images/Lab07_Fig2.png)
