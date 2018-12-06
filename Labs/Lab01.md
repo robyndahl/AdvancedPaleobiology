@@ -124,4 +124,101 @@ Did it work?
 ````R
 > 0 > 1
 [1] FALSE
+
+# Let's ask if 5 is 1/2 of 10
+> 5 == (1/2 * 10)
+[1] TRUE
 ````
+
+Notice that we used `==` to ask if these two questions are equal, rather than a single `=` sign. Most **operators** in R are straightforward, but there are some (like `==`) that are not intuitive. Here is a list of the basics. There are a few other operators in R, but we will worry about them later.
+
+**Operator Example** | **Operator Definition**
+-------------------- | -----------------------
+x > y | is x greater than y
+x >= y | is x greater than or equal to y
+x < y | is x less than y
+x <= y | is x less than or equal to y
+x == y | is x equal to y
+x != y | is x not equal to y
+
+## Using Functions for Basic Math
+
+Of course, writing out the artithmetic every time wouldn't be any better than just using a calculator. The first benefit that R has over a calculator is that it has many **functions** for arithmetic expressions that you can use as shortcuts.
+
+````R
+# For example, if I wanted to take the square root of a number
+# I could just write out the expression:
+> 4 ^ (1/2)
+[1] 2
+
+# Or I could use the sqrt( ) function
+> sqrt(4)
+[1] 2
+````
+Note that all functions have two parts. The function name `sqrt( )` and a set of function arguments that go inside the parentheses. Arguments are objects that you want the function to evaluate.
+
+Now, you might be thinking, that doesn't really save any time compared to writing out the expression. True, but functions will save you more time on complex expressions. For example, try typing out the factorial of 10:
+
+````R
+> 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1
+[1] 3628800
+
+# Instead of typing all those numbers, you can just use the factorial function:
+> factorial(10)
+[1] 3628800
+````
+
+The second most important benefit of functions is that they explicitly say what your code is doing. Seeing `factorial(10)` makes it immediately clear that you are calculating the factorial of ten.
+
+## Storing Data in an Array
+
+These simple functions probably still don't seem that impressive if you consider that most calculators already have buttons for square roots, factorials, etc. However, functions in R don't really shing unitl they are paired with stored data.
+
+Let's consider the quadratic equation `5x^2+3x+7`. Let's say we want to solve this equation for `x=4`. That's easy to do in the way that we've already learned:
+
+````R
+> 5 * (4 ^ 2) + (3 * 4) + 7
+[1] 99
+````
+
+But what if we wanted to solve this equation for multiple values of `x`? Let's try solving for `x = 1,2,3,4`. We cna do this by telling R to perform the function on all four numbers at once using the `c( )` command. `c( )` concatenates all the values within the parentheses into a vector.
+
+````R
+> 5 * c(1,2,3,4) ^ 2 + 3 * c(1,2,3,4) + 7
+[1] 15 33 61 99
+````
+
+What if we wanted to solve a very long equation with a very long list of x-values? Typing out all of the x-values with `c( )` every time x appears in the equation could get very hard to read very quickly:
+
+````R
+# Typing things out every time woudl defeat the whole point of using computers.
+> 9*c(1,2,3,4,5,6,7,8,9,10)^3+6*c(1,2,3,4,5,6,7,8,9,10)^2+8*c(1,2,3,4,5,6,7,8,9,10)+2
+[1]   25  114  323  706 1317 2210 3439 5058 7121 9682
+````
+
+A better alternative involves learning how to store data as an **object**, and then plugging that object into equations. The most fundamental type of data object in computer science is generally called an **array**. In R, there is an even more fundamental type of data object known as a **vector**. For now, let's talk about arrays.
+
+An array is essentially a set of values saved to your computer memory that is referenced by a name. Here is an example of how to make an array:
+
+````R
+# Create an array named "MyArray"
+> MyArray <- array(data = c(1,2,3,4), dim = 4)
+
+# View your array by typing the name
+> MyArray
+[1] 1 2 3 4
+
+# You can perform arithmetic on your array
+> MyArray + 4
+[1] 5 6 7 8
+
+# You can input your array into a function, and the function will be applied to each element in the array
+> factorial(MyArray)
+[1]  1  2  6 24
+
+> 5 * MyArray ^ 2 + 3 * MyArray + 7
+[1] 15 33 61 99
+````
+
+## Differences Between Array (the object) and array( ) (the function)
+
