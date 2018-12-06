@@ -61,7 +61,7 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
 
 7. Code **four** different ways to **subscript** the **2nd row** and **7th column** of ````mtcars```` using bracket notation. (Hint: You are looking to return the number 17.02)
 
-8. How would you change the landmass values of "Icland", "Kyushu", and "Tierra del Fuego" to 82, 21, and 10 in the ````islands```` dataset? (Hint: You will need to use **subscripts** and the ````<-```` operator).
+8. How would you change the landmass values of "Iceland", "Kyushu", and "Tierra del Fuego" to 82, 21, and 10 in the ````islands```` dataset? (Hint: You will need to use **subscripts** and the ````<-```` operator).
 
 9. Are there any times when the beaver in the ````beaver1```` dataset had a temperature lower than 36.30 degrees? How did you find out?
 
