@@ -10,11 +10,11 @@ We will be using several pre-built datasets that come with R. You can load them 
 # Data from the 1974 Motor Trends US magazine
 > data(mtcars)
 
-# Measurements of the girth, height, and volume of felled black cherry trees
-> data(trees)
+# The body temperature series of a beaver
+> data(beaver1)
 
-# The average amount of precipitation (rainfall) in inches for U.S. cities
-> data(precip)
+# Areas of the world's major landmasses
+> data(islands)
 ````
 
 Note that you would normally need to define the name of new objects using the ````<-```` operator, but the ````data( )```` function creates a new object for you automatically.
@@ -32,37 +32,37 @@ Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
 Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
 
 # You can also use the tail( ) function to display the last few rows of the dataset
-> tail(trees)
-   Girth Height Volume
-26  17.3     81   55.4
-27  17.5     82   55.7
-28  17.9     80   58.3
-29  18.0     80   51.5
-30  18.0     80   51.0
-31  20.6     87   77.0
+> tail(beaver1)
+    day time  temp activ
+109 347  250 36.84     0
+110 347  300 36.86     0
+111 347  310 36.88     0
+112 347  320 36.93     0
+113 347  330 36.97     0
+114 347  340 37.15     1
 
-> head(precip)
-Mobile      Juneau     Phoenix Little Rock Los Angeles  Sacramento
-  67.0        54.7         7.0        48.5        14.0        17.2
+> head(islands)
+      Africa   Antarctica         Asia    Australia Axel Heiberg 
+       11506         5500        16988         2968           16 
 ````
 **PROBLEM SET 1**
 
 1. What **class** of object is ````mtcars````? What function did you use to find out?
 
-2. Is ````precip```` defined as a **1-dimensional array** or a **vector**? How did you find out?
+2. Is ````islands```` defined as a **1-dimensional array** or a **vector**? How did you find out?
 
-3. How would you convert the data.frame ````trees```` into a matrix?
+3. How would you convert the data.frame ````beaver1```` into a matrix?
 
-4. What is the name of the 14th city in the ````precip```` dataset?
+4. What is the name of the 8th landmass in the ````islands```` dataset? How did you find out?
 
 5. What function would you use if you wanted to combine all three datasets into a single object?
 
-6. Does ````precip```` consist of numeric data? How did you find out?
+6. Does ````islands```` consist of numeric data? How did you find out?
 
 7. Code **four** different ways to **subscript** the **2nd row** and **7th column** of ````mtcars```` using bracket notation. (Hint: You are looking to return the number 17.02)
 
-8. How would you change the precipitation values of "Juneau", "Phoenix", and "Sacramento" to 23, 46, and 12 in the ````precip```` dataset? (Hint: You will need to use **subscripts** and the ````<-```` operator).
+8. How would you change the landmass values of "Icland", "Kyushu", and "Tierra del Fuego" to 82, 21, and 10 in the ````islands```` dataset? (Hint: You will need to use **subscripts** and the ````<-```` operator).
 
-9. Are there any trees in the ````trees```` dataset with more **girth** than **volume**? How did you find out?
+9. Are there any times when the beaver in the ````beaver1```` dataset had a temperature lower than 36.30 degrees? How did you find out?
 
-10. Take the sum of all elements in the column **height** in the ````trees```` dataset and call this value **ValueA**. Take the sume of all elements in the row **Valiant** in the ````mtcars```` dataset and call this value **ValueB**. Take the sum of the first **8 elements** of the ````precip```` dataset and call this value **ValueC**. Divide **ValueC** by **ValueB** and add **ValueA**. What is your final answer? Show your code.
+10. Take the sum of all elements in the column **temp** in the ````beaver1```` dataset and call this value **ValueA**. Take the sume of all elements in the row **Valiant** in the ````mtcars```` dataset and call this value **ValueB**. Take the sum of the first **7 elements** of the ````islands```` dataset and call this value **ValueC**. Divide **ValueC** by **ValueB** and add **ValueA**. What is your final answer? Show your code.
