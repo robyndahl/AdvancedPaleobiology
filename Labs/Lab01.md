@@ -1,4 +1,4 @@
-# Begginer Concepts in R
+# Beginner Concepts in R
 
 Welcome to your first tutorial in the programming language R. We will work through this tutorial together in class, but you can always return to this page to review any of the concepts. This tutorial is based on the Beginner Concepts tutorial designed by Andrew Zaffos for his course teachPaleobiology. We will cover the same information in a different way, and you are welcome to use his page as a learning resource.
 
