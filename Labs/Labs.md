@@ -12,5 +12,6 @@ Lab | Due Date | Description | Test
 [Lab 06](/Labs/Lab06.md) | 02.07 | Introduction to Building Phylogenies
 [Lab 07](/Labs/Lab07.md) | 02.14 | Introduction to the Paleobiology Database
 [Lab 08](/Labs/Lab08.md) | 02.21 | Modeling Ecological Gradients
-[Lab 09](/Labs/Lab09.md) | 02.28 | Mapping Lagerstatte with the PBDB
-[Lab 10](/Labs/Lab10.md) | 03.07 | Calculating Stratigraphic Ranges
+[Lab 09](/Labs/Lab09.md) | 02.28 | Calculating Stratigraphic Ranges
+[Lab 10](/Labs/Lab10.md) | 03.07 | Photogrammetry
+[Lab 11](/Labs/Lab11.md) | 03.14 | Collecting 3D Data
