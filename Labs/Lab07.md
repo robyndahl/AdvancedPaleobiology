@@ -151,6 +151,8 @@ The best way to think about using an API is to imagine it as a map to all the da
 
 When we access data in R via **subscripting** `Object[ ]`, we are using a coordinate system to point out the data in our object. In contrast, when we access data through an API, we are defining a **route**. In fact, route is the formal terminology. Depending on the size of an API, there may be dozens of routes, which may feel overwhelming at first. However, remember that a car map has thousands or hundreds of thousands of roads, most of which you will never travel on, but you still need to know how to use the map to get where you're going. It's the same with an API.
 
+If you want to read more about APIs and see some non-paleontological example of how to use them, check out this blog post from the Pew Research Center: [Using APIs to collect website data](https://medium.com/pew-research-center-decoded/using-apis-to-collect-website-data-b7fc340d59e3)
+
 Let's deconstruct a specific API **query** (i.e., URL):
 
 ![Lab07_Fig4](/Images/Lab07_Fig4.png)
