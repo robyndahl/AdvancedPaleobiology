@@ -69,6 +69,8 @@ Let's create a numeric matrix next:
 
 7. How can you change every instance of the number 1 to 11?
 
-8. How can you change the elements of column 12 into **character data**, while keeping columns 1-11 as numeric data?
+8. How many values in `MyMatrix` are greater than 3 and less than 8?
 
-9. Find which rows of `MyMatrix` have a sum >70. Make a *new* version of `MyMatrix` where the 13th column is a set of `TRUE` and `FALSE` values denoting which rows have a sum >70. (**Hint:** What type of object allows you to store both logical and numeric data at once?)
+9. How can you change the elements of column 12 into **character data**, while keeping columns 1-11 as numeric data?
+
+10. Find which rows of `MyMatrix` have a sum >70. Make a *new* version of `MyMatrix` where the 13th column is a set of `TRUE` and `FALSE` values denoting which rows have a sum >70. (**Hint:** What type of object allows you to store both logical and numeric data at once?)
