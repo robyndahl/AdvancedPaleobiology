@@ -8,7 +8,7 @@ We are going to make our own dataset for this exercise using random data. Normal
 
 ````R
 # First we need to set the seed:
-> set.seed(541)
+> set.seed(222)
 
 # To create an 8 x 12 matrix of random logica data, we need to have 96 elements (8 * 12)
 > MatrixElements <- sample(c(TRUE,FALSE), size=96, replace=TRUE)
@@ -17,14 +17,14 @@ We are going to make our own dataset for this exercise using random data. Normal
 > MyMatrix <- array(data=MatrixElements, dim=c(8,12))
 > MyMatrix
       [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]  [,8]  [,9] [,10] [,11] [,12]
-[1,] FALSE  TRUE  TRUE  TRUE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE FALSE
-[2,] FALSE FALSE FALSE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE FALSE FALSE  TRUE
-[3,] FALSE FALSE  TRUE  TRUE  TRUE  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE
-[4,]  TRUE FALSE FALSE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE
-[5,]  TRUE  TRUE FALSE  TRUE  TRUE  TRUE FALSE  TRUE FALSE  TRUE FALSE FALSE
-[6,]  TRUE  TRUE FALSE  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE FALSE FALSE
-[7,]  TRUE FALSE  TRUE FALSE  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE FALSE
-[8,] FALSE FALSE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE FALSE
+[1,] FALSE FALSE FALSE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE FALSE FALSE FALSE
+[2,]  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE  TRUE FALSE  TRUE FALSE  TRUE
+[3,]  TRUE  TRUE  TRUE FALSE FALSE FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE
+[4,]  TRUE  TRUE  TRUE  TRUE FALSE FALSE  TRUE FALSE  TRUE  TRUE FALSE FALSE
+[5,] FALSE  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE
+[6,] FALSE FALSE  TRUE FALSE  TRUE FALSE FALSE  TRUE  TRUE  TRUE FALSE  TRUE
+[7,]  TRUE FALSE  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE
+[8,]  TRUE  TRUE FALSE FALSE FALSE FALSE  TRUE FALSE  TRUE FALSE FALSE  TRUE
 ````
 
 **Section 1 Questions**
@@ -37,31 +37,38 @@ We are going to make our own dataset for this exercise using random data. Normal
 
 ## A Numeric Matrix
 
-Let's look at airline passenger data. This dataset shows the number of airline passengers (in 1000's), from 1949 to 1960.
+Let's create a numeric matrix next:
 
 ````R
-# Load the AirPassengers dataset
-> data(AirPassengers)
-> AirPassengers
-     Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
-1949 112 118 132 129 121 135 148 148 136 119 104 118
-1950 115 126 141 135 125 149 170 170 158 133 114 140
-1951 145 150 178 163 172 178 199 199 184 162 146 166
-1952 171 180 193 181 183 218 230 242 209 191 172 194
-1953 196 196 236 235 229 243 264 272 237 211 180 201
-1954 204 188 235 227 234 264 302 293 259 229 203 229
-1955 242 233 267 269 270 315 364 347 312 274 237 278
-1956 284 277 317 313 318 374 413 405 355 306 271 306
-1957 315 301 356 348 355 422 465 467 404 347 305 336
-1958 340 318 362 348 363 435 491 505 404 359 310 337
-1959 360 342 406 396 420 472 548 559 463 407 362 405
-1960 417 391 419 461 472 535 622 606 508 461 390 432
+# First we need to set the seed
+> set.seed(222)
+
+# Then we will randomly sample a vector of numeric data
+> MatrixElements<-sample(c(1,2,3,4,5,6,7,8,9,10), size = 96, replace=TRUE)
+> MyMatrix<-matrix(MatrixElements,8,12)
+
+> MyMatrix
+     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12]
+[1,]   10    6    7    3    1    8    1    4    5     8     6    10
+[2,]    1    2    1   10    6    9   10    3   10     1     8     5
+[3,]    5    5    2    8    6    8    1   10    5     6     7     7
+[4,]    1    1    3    5   10    8    5    7    2     3     6     9
+[5,]   10    2    9    5    7    3    7    3    5     5     3     2
+[6,]   10    8    3   10    4    8    9    2    2     1     9     4
+[7,]    4   10    1    2    3   10    4    8    7     9     9     8
+[8,]    5    1    6    7    8    7    1   10    2     6     9     5
 ````
 
 **Section 2 Questions**
 
-4. How would you find the annual total of passengers for each year?
+4. How many times does the number 7 occur in `MyMatrix`?
 
-5. How would you determine the month and year in which the **most** number of people flew?
+5. How do you find the sum of each column?
 
-6. How would you determine the month and year in which the **least** number of people flew?
+6. How do you find the product of each column?
+
+7. How can you change every instance of the number 1 to 11?
+
+8. How can you change the elements of column 12 into **character data**, while keeping columns 1-11 as numeric data?
+
+9. Find which rows of `MyMatrix` have a sum >70. Make a *new* version of `MyMatrix` where the 13th column is a set of `TRUE` and `FALSE` values denoting which rows have a sum >70. (**Hint:** What type of object allows you to store both logical and numeric data at once?)
