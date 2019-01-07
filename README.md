@@ -1,6 +1,8 @@
 # Geology 497Q/597Q - Advanced Paleobiology
 
-This repository contains course materials and information for the Advanced Paleobiology course at Western Washington Univeristy. This course is taught by Dr. Robyn Mieko Dahl. 
+This repository contains course materials and information for the Advanced Paleobiology course at Western Washington University. Additional materials may be posted on the course Canvas site. 
+
+This course is taught by Dr. Robyn Mieko Dahl. 
 
 ## Programs, etc, Required For This Course
 
@@ -14,3 +16,4 @@ This course emphasizes quantitative paleobiology research methods and therefore 
 ## Course Resources
 
 + [Laboratory Assignments](/Labs/Labs.md)
++ [Syllabus](syllabus.pdf)
