@@ -1,7 +1,7 @@
 # R Advanced Concepts Quiz
 
 
-Complete this test by working through the problem sets and then uploading your answer sheet to your own markdown sheet in your GitHub Repository. Submit a link to your answer sheet in Canvas by the due date: 
+Complete this test by working through the problem sets and then uploading your answer sheet to your own markdown sheet in your GitHub Repository. Submit a link to your answer sheet in Canvas by the due date: **Thursday, Jan 24 @ 11:59pm**
 
 ## A Mystical Rite of Passage
 
