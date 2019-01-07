@@ -16,4 +16,4 @@ This course emphasizes quantitative paleobiology research methods and therefore 
 ## Course Resources
 
 + [Laboratory Assignments](/Labs/Labs.md)
-+ [Syllabus](syllabus.pdf)
++ [Syllabus](Syllabus_Winter2019.pdf)
