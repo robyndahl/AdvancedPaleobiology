@@ -107,10 +107,24 @@ The major axis on your plot shows the variance of principal component 1 (PC 1). 
 
 The minor axis on your plot shows the variance of PC 2. According to the plot, which two specimens are least similar in terms of PC 2? While you cannot see the warp grids for these two specimens on the plot, you can examine the `.png` files. Embed these images in your MarkDown file and describe the visual differences between them. What factor does PC 2 seem to describe?
 
-You can plot other principal components using additional arguments in `plotTangentSpace( )`. For example, if you wanted compare PC 2 to PC 3, you would use:
+Examine the PC Summary. In the summary, you are given the standard deviation, proportion of variance, and cumulative proportion for each principal component. The proportion of variance tells you how much of the variance between specimens each principal component accounts for, and PC 1 always accounts for the most variance, PC 2 for the second most, PC 3 for the third most, etc. For most data sets, nearly all the variance can be accounted for by the first few principal components. For example, over 99% of the variance in this dataset is accounted for by PC 1-7.
+
+You can create a simple bar plot of the proportion of variance using the following:
+
+````R
+> barplot(osteoPCA$pc.summary$sdev^2/sum(osteoPCA$pc.summary$sdev^2))
+````
+
+Create the barplot and embed the figure in your Markdown file.
+
+You can also plot other principal components using additional arguments in `plotTangentSpace( )`. For example, if you wanted compare PC 2 to PC 3, you would use:
 
 ````R
 > osteoPCA <- plotTangentSpace(osteoGPA$coords, axis1 = 2, axis2 = 3, label = TRUE)
 ````
 
 Try plotting PC 1 and PC 18. Include the code that you used in your MarkDown file, and embed the resuting plot. Why does it look like all the specimens fall almost perfectly along a single line parallel to the major axis?
+
+## Conclusions
+
+Now that you've learned the basics of morphometrics, you can apply this technique to many different types of research questions. We will return the concept in later labs, but in the mean time, try to think of an interesting or creative reason to use morphometric analysis in a paleontological context. Write a short paragraph explaining your idea and include it in your markdown file.
