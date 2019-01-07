@@ -6,8 +6,8 @@
 
 + [Pre-lab reading assignment](#pre-lab-reading-assignment)
 + [Part 1: Osteostracans Landmark Data Collection](#part-1-osteostracans-landmark-data-collection)
-+ Part 2: Data Analysis
-+ Part 3: Conclusions
++ [Part 2: Data Analysis](#part-2-data-analysis)
++ [Part 3: Conclusions](#conclusions)
 
 ## Pre-Lab Reading Assignment
 
@@ -41,6 +41,8 @@ We need to format this spreadsheet so that it can be saved as a `.tps` file that
 To save this as a `.tps` file, highlight the two columns your coordinate data (columns F & G in the example picture) and copy. In Word, use `Paste Special` to paste the data as **unformatted text**. Some programs don't like tab characters, which are inserted by default when you paste from Excel. Remove them with `Edit > Find > Advanced Replace` and `Replace`. To do this, click the arrow in the lower left to show options. Click the "replace" tab at the top to open both Find and Replace input bars. Enter `^t` in the "Find What" bar and enter a single space in the "Replace With" bar. Click `Replace All`.
 
 Save your file as **plain text** in the r directory on the computer you are working on.
+
+## Part 2: Data Analysis
 
 **Step 4:** Now we will use the `geomorph` R package to analyze our landmark data. You may want to review Adams & Otarola-Castillo (2013) *geomorph: an R package for the collection and analysis of geometric mophometric shape data* and Sherratt (2014) *Quick Guide to geomorph v2.0* before starting.
 
@@ -76,40 +78,25 @@ To conduct a GPA on your data, complete the following:
 # take a look at the GPA results
 > osteoGPA
 
-Call:
-gpagen(A = osteostracans) 
-
-
-
-Generalized Procrustes Analysis
-with Partial Procrustes Superimposition
-
-13 fixed landmarks
-0 semilandmarks (sliders)
-2-dimensional landmarks
-2 GPA iterations to converge
-
-
-Consensus (mean) Configuration
-
-                X            Y
- [1,]  0.39189606 -0.016822253
- [2,]  0.11413319 -0.005343057
- [3,]  0.03656083 -0.001659035
- [4,] -0.14014476  0.007332923
- [5,] -0.26612769  0.014346020
- [6,] -0.24769728 -0.390110028
- [7,] -0.13333639 -0.267753873
- [8,]  0.24169427 -0.083500449
- [9,]  0.03254271 -0.056690595
-[10,]  0.03766768  0.053135477
-[11,]  0.24603325  0.058587919
-[12,] -0.10576190  0.277486630
-[13,] -0.20745997  0.410990320
-
 # plot the GPA
 > plot(osteoGPA)
 ````
 Examine the plot. What is information does it visualize?
 
-**Step 5:** Now we will use `geomorph` to conduct a **Principal Components Analysis** or PCA. 
+**Step 5.** Now we will use `geomorph` to conduct a **Principal Components Analysis** or PCA. For a quick explanation of PCA, we can turn to Foote & Miller:
+
+***Ordination of Specimens*** *One of the main uses of multivariate analysis is the facilitate visual inspection of data. In a bivariate plot, it is easy to see which specimens are most similar, how specimens differ, how the data trend, and so on. To do the same with multivariate data requires an ***ordination*** -- *a representation of the position of the specimens relative to on another. One of the most widely employed methods to achieve this goal is PCA. In the figure above, Figure 3.12c shows the same hypothetical data as figure 3.12a. The points have simply been rotated so that the major and minor axes running through the data in Figure 3.12a are now in the same direction as the new x and y axes of Figure 3.12c. The direction of the major axis is the direction of maximal dispersion in the data and defines the first principal component. There is still residual variation around the axis, indicated by the minor axis that is perpendicular to the first axis. The minor axis defines the second principal component.*
+
+*The method of principal components extends to any number of dimensions. Each successive axis is always perpendicular to all the previous ones, and it runs in the direction of maximal remaining dispersion around the previous axes. The position of each specimen along a particular principal-component axis is referred to as its score on that axis. The length of each axis tells how much variance in the data is acounted for by the corresponding principal component; it is expressed by a number called the eigenvalue.*
+
+To conduct and plot PCA in R:
+
+````R
+> osteoPCA <- plotTangenSpace(osteoGPA$coords, label = TRUE)
+
+# View a summary of variance associated with each PC axis using $pc.summary
+> osteoPCA$pc.summary
+
+# View the shape variables as principal component scores using $pc.scores
+> osteoPCA$pc.scores
+````
