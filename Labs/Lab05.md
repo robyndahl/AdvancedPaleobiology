@@ -92,7 +92,8 @@ The method of principal components extends to any number of dimensions. Each suc
 To conduct and plot PCA in R:
 
 ````R
-> osteoPCA <- plotTangenSpace(osteoGPA$coords, label = TRUE)
+# Plot the PCA
+> osteoPCA <- plotTangentSpace(osteoGPA$coords, label = TRUE)
 
 # View a summary of variance associated with each PC axis using $pc.summary
 > osteoPCA$pc.summary
@@ -100,3 +101,16 @@ To conduct and plot PCA in R:
 # View the shape variables as principal component scores using $pc.scores
 > osteoPCA$pc.scores
 ````
+Examine the information you have just generated (specifically, the PCA summary and the plot). What does this information tell you about the original set of Osteostracan skulls?
+
+The major axis on your plot shows the variance of principal component 1 (PC 1). According to the plot, which two specimens are LEAST similar in terms of PC 1? The two warp grids shown on the plot illustrate these two endpoints. Embed the `.png` files for these two specimens in your MarkDown file and describe the visual differences between them. What factor does PC 1 seem to describe?
+
+The minor axis on your plot shows the variance of PC 2. According to the plot, which two specimens are least similar in terms of PC 2? While you cannot see the warp grids for these two specimens on the plot, you can examine the `.png` files. Embed these images in your MarkDown file and describe the visual differences between them. What factor does PC 2 seem to describe?
+
+You can plot other principal components using additional arguments in `plotTangentSpace( )`. For example, if you wanted compare PC 2 to PC 3, you would use:
+
+````R
+> osteoPCA <- plotTangentSpace(osteoGPA$coords, axis1 = 2, axis2 = 3, label = TRUE)
+````
+
+Try plotting PC 1 and PC 18. Include the code that you used in your MarkDown file, and embed the resuting plot. Why does it look like all the specimens fall almost perfectly along a single line parallel to the major axis?
