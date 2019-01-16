@@ -17,3 +17,7 @@ This course emphasizes quantitative paleobiology research methods and therefore 
 
 + [Laboratory Assignments](/Labs/Labs.md)
 + [Syllabus](Syllabus_Winter2019.pdf)
+
+## Lecture Topics
+
++ [Intro to Morphometrics & PCA](Lectures/faces.md)
