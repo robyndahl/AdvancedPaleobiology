@@ -10,7 +10,7 @@ Each student has submitted three selfies: neutral, smiling, frowning. The photos
 
 ## Step 2 - Landmark Data Collection
 
-Before class, I will have collected landmark data from the faces photoset. There are an endless number of facial landmarks that can be used, so I have opted for a scheme that uses 27 landmarks:
+Before class, I will have collected landmark data from the faces photoset. There are an endless number of facial landmarks that can be used, so I have opted for a scheme that uses 22 landmarks, simlar to this scheme:
 
 ![Facial Landmarks](https://docs.microsoft.com/en-us/azure/cognitive-services/face/images/landmarks.1.jpg) <img src="https://github.com/robyndahl/AdvancedPaleobiology/blob/master/Images/Landmarks.png?raw=true" width="250">
 
