@@ -213,3 +213,7 @@ If we want to color by expression, we can use `groups` and the `Expression` colu
 Here's what we end up with:
 
 ![FacesPCA Plot](/Images/facesPCAcomplete.png)
+
+## Discussion
+
+So, what does it look like PCA can tell us about this data? We will have this discussion in class.
