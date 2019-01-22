@@ -40,7 +40,7 @@ We need to format this spreadsheet so that it can be saved as a `.tps` file that
 
 To save this as a `.tps` file, highlight the two columns your coordinate data (columns F & G in the example picture) and copy. In Word, use `Paste Special` to paste the data as **unformatted text**. Some programs don't like tab characters, which are inserted by default when you paste from Excel. Remove them with `Edit > Find > Advanced Replace` and `Replace`. To do this, click the arrow in the lower left to show options. Click the "replace" tab at the top to open both Find and Replace input bars. Enter `^t` in the "Find What" bar and enter a single space in the "Replace With" bar. Click `Replace All`.
 
-Save your file as **plain text** in the r directory on the computer you are working on.
+Save your file as **plain text** in the r directory on the computer you are working on. Then edit the extension from .txt to .tps
 
 ## Part 2: Data Analysis
 
@@ -81,7 +81,7 @@ To conduct a GPA on your data, complete the following:
 # plot the GPA
 > plot(osteoGPA)
 ````
-Examine the plot. What is information does it visualize?
+Examine the plot. ***What is information does it visualize?*** Include your plot and answer to this question in your markdown file.
 
 **Step 5.** Now we will use `geomorph` to conduct a **Principal Components Analysis** or PCA. For a quick explanation of PCA, we can turn to Foote & Miller:
 
@@ -123,7 +123,7 @@ You can also plot other principal components using additional arguments in `plot
 > osteoPCA <- plotTangentSpace(osteoGPA$coords, axis1 = 2, axis2 = 3, label = TRUE)
 ````
 
-Try plotting PC 1 and PC 18. Include the code that you used in your MarkDown file, and embed the resuting plot. Why does it look like all the specimens fall almost perfectly along a single line parallel to the major axis?
+Try plotting PC 1 and PC 18. Include the code that you used in your MarkDown file, and embed the resuting plot. ***Why does it look like all the specimens fall almost perfectly along a single line parallel to the major axis?***
 
 ## Conclusions
 
