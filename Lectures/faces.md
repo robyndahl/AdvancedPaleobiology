@@ -181,7 +181,8 @@ To add labels or color, let's explore the `plotTangentSpace( )` function more cl
 ***FUNCTION:***
 
 ````R
-plotTangentSpace(A, axis1 = 1, axis2 = 2, warpgrids = TRUE, mesh = NULL, label = FALSE, groups = NULL, verbose = FALSE)
+plotTangentSpace(A, axis1 = 1, axis2 = 2, warpgrids = TRUE, mesh = NULL, label = FALSE,
+                 groups = NULL, verbose = FALSE)
 ````
 
 ***ARGUMENTS:***
@@ -196,3 +197,19 @@ Argument | Description
 **label** | A logical value indicating whether labels for each specimen should be displayed
 **groups** | An optional factor vector specifying group identity for each specimen
 **verbose** | A logical value indicating whether the output is basic or verbose
+
+If we want to label each data point with the name of person it represents, we can use `label` and the `Name` column from our specimens dataset.
+
+````R
+> plotTangentSpace(facesGPA$coords, label = specimens$Name)
+````
+
+If we want to color by expression, we can use `groups` and the `Expression` column. In that case, it would be good add a legend as well.
+
+````R
+> plotTangentSpace(facesGPA$coords, label = specimens$Name, groups = specimens$Expression, legend = TRUE)
+````
+
+Here's what we end up with:
+
+![FacesPCA Plot](/Images/facesPCAcomplete.png)
