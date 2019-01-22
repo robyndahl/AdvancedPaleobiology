@@ -92,6 +92,29 @@ The resulting plot shows the same data, but it has been aligned and resized to s
 
 ![FacesGPA](/Images/facesGPA.png)
 
-After we have produced a PCA plot, we will discuss what the major axes of the plot show and decide as a group whether the results accurately pick up differences in each class member's facial features or whether other biases affect the outcome of the analysis.
+From the GPA plot, we can instantly tell which landmarks had the most and least variation. But we still can't really do any analysis beyond a visual check, so we need to use **principal components analysis**. To do PCA in R:
 
-Finally, we will discuss how PCA might be used in other paleontological contexts.
+````R
+> facesPCA <- plotTangentSpace(facesGPA$coords)
+
+> facesPCA$pc.summary
+Importance of first k=26 (out of 27) components:
+                           PC1     PC2    PC3     PC4     PC5     PC6     PC7     PC8
+Standard deviation     0.05288 0.05162 0.0364 0.03527 0.03063 0.02179 0.01892 0.01517
+Proportion of Variance 0.25997 0.24765 0.1231 0.11563 0.08722 0.04415 0.03326 0.02138
+Cumulative Proportion  0.25997 0.50761 0.6308 0.74640 0.83362 0.87776 0.91102 0.93240
+                           PC9    PC10     PC11     PC12     PC13     PC14    PC15
+Standard deviation     0.01360 0.01058 0.009762 0.008011 0.007613 0.007058 0.00603
+Proportion of Variance 0.01719 0.01041 0.008860 0.005970 0.005390 0.004630 0.00338
+Cumulative Proportion  0.94959 0.95999 0.968850 0.974820 0.980200 0.984830 0.98821
+                           PC16     PC17    PC18     PC19     PC20     PC21     PC22
+Standard deviation     0.005579 0.005085 0.00445 0.004005 0.003153 0.002654 0.002239
+Proportion of Variance 0.002890 0.002400 0.00184 0.001490 0.000920 0.000650 0.000470
+Cumulative Proportion  0.991110 0.993510 0.99535 0.996840 0.997770 0.998420 0.998890
+                           PC23     PC24     PC25     PC26
+Standard deviation     0.002186 0.001783 0.001583 0.001226
+Proportion of Variance 0.000440 0.000300 0.000230 0.000140
+Cumulative Proportion  0.999330 0.999630 0.999860 1.000000
+````
+
+You may have noticed that using `plotTangentSpace( )` produced a plot. We will come back to that, but let's explore the `facesPCA$pc.summary` first.
