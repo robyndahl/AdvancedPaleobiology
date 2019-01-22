@@ -2,6 +2,8 @@
 
 This lab builds on the morphometrics activity that we have already complete in [Lab 05](/Labs/Lab05.md). It was originaly created by [Andrew Zaffos](https://github.com/aazaff/teachPaleobiology/blob/master/LabExercise2.md) and edited for this course.
 
+Part 1 should be quick and easy based on our previous lab. Part 2 explores how PCA can be combined with phylogenetic data to better understand evolutionary relationships.
+
 ## Part 1
 
 Fossil species are recognized and classified on the basis of morphology. This introduces subjectivity into the process of classification because all species display some range of morphological variability and the line between intra- and interspecific variability is often a judgment call.
@@ -108,12 +110,83 @@ This is the dataset we need to conduct a landmark analysis.
 
 The first thing we need to do in a landmark analysis is a **procrustes** mathematical transformation. It takes its name from the ancient greek legend of Procrustes (Προκρούστης). Procrustes was a serial killer who would invite unsuspecting travellers to stay the night at his inn. If the travellers were too short for the bed, Procrustes would cruelly stretch out the travellers' bodies to fit the bed. If they were too tall for the bed, Procrustes would amputate their limbs until they fit.
 
-<a href="url"><img src="/Lab2Figures/Procrustes.jpg" align="center" height="300" width="400" ></a>
+<a href="url"><img src="https://github.com/aazaff/teachPaleobiology/blob/master/Lab2Figures/Procrustes.jpg" align="center" height="300" width="400" ></a>
 
 Remember that landmark analysis is concerned with **shape** and not **size**. We therefore apply that the procrustes transformation to shrink or enlargen the data (specifically known as scaling) in such a way that we elminate size as a factor between specimens, but still maintain appropriate information about shape - i.e., the *relative* distance of the landmarks.
 
 The mathematics behind this is fairly complex, but luckily there is a funciton in the geomorph packages that will do this for us. Let's perform a procrustes transformation on the````plethodon```` landmarks using the ````gpagen( )````  function.
 
 ````R
-ProcrustesPlethodon<-gpagen(plethodon[["land"]])
+> ProcrustesPlethodon<-gpagen(plethodon$land)
 ````
+
+#### Step 4
+
+The next step we need to do is a **principle components analysis** (PCA) on the transformed data. PCA is one of the most common forms of **multivariate**. A large part of this class will be about various forms of multivariate analyses. We will go more into the underlying theory of multivariate analyses - in general - in later labs. [For now, we'll just explain the basic idea of PCA](https://github.com/aazaff/teachPaleobiology/blob/master/PCATutorial.md).
+
+Because it can be used for a variety of purposes, not just morphometrics, there are several packages and functions for running a PCA in R. However, we will stick with the function built into the geomorph package, ````plotTangentSpace( )````.
+
+````R
+# plotTangentSpace both runs the PCA & plots it simultaneously. Other packages
+# that we will use later in the semester will not do both of these things simulateneously
+# so don't get confused. We are also going to turn of the warpgrids and verbose features,
+# because we do not need them for our puproses.
+
+> plotTangentSpace(ProcrustesPlethodon$coords, warpgrids = FALSE, verbose = FALSE)
+````
+
+<a href="url"><img src="https://github.com/aazaff/teachPaleobiology/blob/master/Lab2Figures/Plethodon.png" align="center" height="500" width="500" ></a>
+
+#### Step 5
+
+Now that you have plotted the PCA, it should be obvious that the specimens cluster into three distinct morphologic groups based on their morphology - presumably this means that there are three different species in the data set. Though, remember, there can be other sources of morphologic variation.
+
+#### Part II Questions - Subsection 2
+
+1. Use the hummingbird dataset. Which object in the list records the landmark data?
+
+2. Perform a procrustes on the landmark data.
+
+3. Perform a PCA on the hummingbird data.
+
+4. How many "species" of hummingbird are there?
+
+## Part III
+
+Examine the following cladogram and answer the questions.
+
+<a href="url"><img src="https://github.com/aazaff/teachPaleobiology/blob/master/Lab2Figures/Figure3.png" align="center" height="300" width="650" ></a>
+
+#### Part III Questions
+
+1.	What is the synapomorphy of the clade containing species D and E?
+
+2.	What is a plesiomorphic character of that clade?
+
+3.	What is the synapomorphy of the clade containing species A and B?
+
+4.	Which taxa have a sulfurous odor?
+
+5.	What character distinguishes species D from species E?
+
+6.	Are adorable eyelashes a synapomorphy or an autapomorphy? 
+
+7.	Traditionally, the five taxa are grouped into three families. Determine if each family is monophyletic, paraphyletic, or polyphyletic.
+
+Family | Species
+--------- | ----------
+Family 1 | Contains species A. 
+Family 2 | Contains species B and C.
+Family 3 | contains species D and E. 
+
+8.	More recently, species A has been grouped in a family with species D and E. Is this advisable? Why or why not?
+
+9.	Determine if the following groups are monophyletic, paraphyletic, or polyphyletic. 
+
+Group | Species
+--------- | ----------
+Group 1 | Species A, B, C. 
+Group 2 | Species C, D, E. 
+Group 3 | Species C and D. 
+Group 4 | Species A and B. 
+Group 5 | Species B, D, E.
