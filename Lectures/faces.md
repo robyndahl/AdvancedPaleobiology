@@ -175,14 +175,17 @@ We can add additional information like labels or colors using a spreadsheet of d
 26 Specimen 26 Victoria    smiling
 27 Specimen 27 Victoria   frowning
 ````
+
 To add labels or color, let's explore the `plotTangentSpace( )` function more closely. 
 
 ***FUNCTION:***
+
 ````R
 plotTangentSpace(A, axis1 = 1, axis2 = 2, warpgrids = TRUE, mesh = NULL, label = FALSE, groups = NULL, verbose = FALSE)
 ````
 
 ***ARGUMENTS:***
+
 Argument | Description
 -------- | -----------
 **A** | A 3D array containing landmark coordinates for a set of aligned specimens
