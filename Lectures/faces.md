@@ -137,4 +137,59 @@ The first thing you should always examine on a graph are the axes, to make sure 
 
 The next thing you might notice are all the data (the black dots). These are our "specimens" (each photo we collected landmark data from), shown in the "shape space" of PC1 vs PC2. There are no labels or other information indicate which photo each dot represents, but we'll add that info next.
 
-The plot also shows two shape grids, illustrating the minimum and maximum shapes on the two PCs plotted. 
+The plot also shows two shape grids, illustrating the minimum and maximum shapes on the two PCs plotted.
+
+## Step 4 - Add More Information to PCA Plot
+
+We can add additional information like labels or colors using a spreadsheet of data:
+
+````R
+> specimens <- read.csv("specimens.csv", header = TRUE)
+> specimens
+      Specimen     Name Expression
+1   Specimen 1  Brandon    neutral
+2   Specimen 2  Brandon    smiling
+3   Specimen 3  Brandon   frowning
+4   Specimen 4    Jenny    neutral
+5   Specimen 5    Jenny    smiling
+6   Specimen 6    Jenny   frowning
+7   Specimen 7    Robyn    neutral
+8   Specimen 8    Robyn    smiling
+9    Specmen 9    Robyn   frowning
+10 Specimen 10     Tina    neutral
+11 Specimen 11     Tina    smiling
+12 Specimen 12     Tina   frowning
+13 Specimen 13    AlexF    smiling
+14 Specimen 14    AlexF    neutral
+15 Specimen 15    AlexF   frowning
+16 Specimen 16     Bert    neutral
+17 Specimen 17     Bert    smiling
+18 Specimen 18     Bert   frowning
+19 Specimen 19   Connor    neutral
+20 Specimen 20   Connor    smiling
+21 Specimen 21   Connor   frowning
+22 Specimen 22    AlexH    neutral
+23 Specimen 23    AlexH    smiling
+24 Specimen 24    AlexH   frowning
+25 Specimen 25 Victoria    neutral
+26 Specimen 26 Victoria    smiling
+27 Specimen 27 Victoria   frowning
+````
+To add labels or color, let's explore the `plotTangentSpace( )` function more closely. 
+
+***FUNCTION:***
+````R
+plotTangentSpace(A, axis1 = 1, axis2 = 2, warpgrids = TRUE, mesh = NULL, label = FALSE, groups = NULL, verbose = FALSE)
+````
+
+***ARGUMENTS:***
+Argument | Description
+-------- | -----------
+**A** | A 3D array containing landmark coordinates for a set of aligned specimens
+**warpgrids** | A logical value indicating whether deformation grids for shapes along X-axis should be displayed
+**mesh** | A mesh3d object to be warped to represent shape deformation along X-axis (when `warpgrids = TRUE`) as described as `warpRefMesh( )`
+**axis1** | A value indicating which PC axis should be displayed as the X-axis (default = PC1)
+**axis2** | A value indicating which PC axis should be displayed as the Y-axis (default = PC2)
+**label** | A logical value indicating whether labels for each specimen should be displayed
+**groups** | An optional factor vector specifying group identity for each specimen
+**verbose** | A logical value indicating whether the output is basic or verbose
