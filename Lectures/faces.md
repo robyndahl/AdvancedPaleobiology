@@ -129,4 +129,12 @@ David Polly (Indiana University) has a more detailed explanation of PCA [here](h
 
 ## Back To Our Analysis
 
+Our intial use of `plotTangentSpace( )` produced a graph like this:
 
+![Blank PCA](/Images/rawPCA.png)
+
+The first thing you should always examine on a graph are the axes, to make sure you know what you're looking at. In this case, the x-axis is labeld **PC 1** and y-axis is labeld **PC 2**, so we're looking at a plot of PC1 vs PC2. This is a standard way to view PCA, because PC1 and PC2 usually account for most of the shape variation in a data set. The values on each axis show the percent variation along each axis.
+
+The next thing you might notice are all the data (the black dots). These are our "specimens" (each photo we collected landmark data from), shown in the "shape space" of PC1 vs PC2. There are no labels or other information indicate which photo each dot represents, but we'll add that info next.
+
+The plot also shows two shape grids, illustrating the minimum and maximum shapes on the two PCs plotted. 
