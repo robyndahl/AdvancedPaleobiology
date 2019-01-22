@@ -35,7 +35,7 @@ First, we load the data into R:
 
 At this point, we could visualize the raw data, but it wouldn't be very informative:
 
-![Raw Landmark Data](/Images/rawlands.pdf)
+![Raw Landmark Data](/Images/rawlands.png)
 
 We need to align the data using **general procrustes analysis**. To do this in `geomorph` and then to visualize the results:
 
@@ -87,6 +87,10 @@ Consensus (mean) Configuration
 >
 > plot(facesGPA)
 ````
+
+The resulting plot shows the same data, but it has been aligned and resized to show each landmark's **centroid** and all the individual landmark variation around that centroid point.
+
+![FacesGPA](/Images/facesGPA.png)
 
 After we have produced a PCA plot, we will discuss what the major axes of the plot show and decide as a group whether the results accurately pick up differences in each class member's facial features or whether other biases affect the outcome of the analysis.
 
