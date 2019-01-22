@@ -22,7 +22,7 @@ Though the landmark data has already been collected, I will demonstrate how to c
 
 ## Step 3 - Data Analysis in R
 
-Next, I will demonstrate how to use the `geomorph` package to conduct a general procrustes analysis (GPA), plot the GPA, and then conduct and plot a principle components analysis (PCA). At each step, we will discuss what the analysis does and what the results tell us.
+Next, I will demonstrate how to use the `geomorph` package to conduct a general procrustes analysis (GPA), plot the GPA, and then conduct and plot a principle components analysis (PCA). At each step, we will discuss what the analysis does and what the results tell us. If you want to read more about the `geomorph` package, do so [here](http://people.tamu.edu/~alawing/materials/ESSM689/Quick_Guide_to_Geomorph_v2.0.pdf).
 
 First, we load the data into R:
 
@@ -88,7 +88,7 @@ Consensus (mean) Configuration
 > plot(facesGPA)
 ````
 
-The resulting plot shows the same data, but it has been aligned and resized to show each landmark's **centroid** and all the individual landmark variation around that centroid point.
+The resulting plot shows the same data, but it has been rotated, scaled, and centered to show each landmark's **centroid** and all the individual landmark variation around that centroid point. Think of the centroids as representing the **consensus shape** of the whole landmark dataset.
 
 ![FacesGPA](/Images/facesGPA.png)
 
@@ -118,3 +118,15 @@ Cumulative Proportion  0.999330 0.999630 0.999860 1.000000
 ````
 
 You may have noticed that using `plotTangentSpace( )` produced a plot. We will come back to that, but let's explore the `facesPCA$pc.summary` first.
+
+## What are principal components?
+
+Principal components analysis (PCA) is a method of analyzing variation in a data set. In paleontology, it is most often used to analyze variation in shape data. In this context, each principal component (PC) represents a different "shape variable" and provides a basis for further analysis. In PCA, the PCs are numbered from **most variability** to **least variability**.
+
+In the `pc.summary` we created above, you can view the standard deviation, proportion of variance, and cumulative proportion of 26 of the 27 PCs for our faces data set. The **Proportion of Variance** indicates how much shape variation that PC accounts for. In our data set, PC1 accounts for 25.997% of shape variation. PC2 accounts for 24.765% (almost as much as PC1), and together, they acccount for 50.761%, which is indicated by the **Cumulative Proportion** of PC2.
+
+David Polly (Indiana University) has a more detailed explanation of PCA [here](http://www.indiana.edu/~g562/Lectures/Lecture%204%20-%20Procrustes,%20PCA,%20and%20morphospace.pdf)
+
+## Back To Our Analysis
+
+
