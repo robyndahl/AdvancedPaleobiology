@@ -21,3 +21,4 @@ This course emphasizes quantitative paleobiology research methods and therefore 
 ## Lecture Topics
 
 + [Intro to Morphometrics & PCA](Lectures/faces.md)
++ [Additional Morphometrics Visualizations](/Lectures/Morpho2.md)
