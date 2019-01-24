@@ -1,18 +1,11 @@
 # Additional Morphometrics Visualizations
 
-## pc.shape
+## mshape( )
 
-You can access the coordiante data for each principal component. If you want to plot the shape difference between a refrence and target specimen, use `plotRefToTangent( )` 
-
-````R
-
-
-
-## mshape
-
-The `mshape( )` function estimates the average landmark coordinates for a set of aligned specimens. 
+The `mshape( )` function estimates the average landmark coordinates for a set of aligned specimens. You can use `mshape( )` to create an average reference specimen, which can then be used to show specific shape variation.
 
 ````R
+# view the coordinates created by mshape( )
 > mshape(facesGPA$coords)
              [,1]         [,2]
  [1,]  0.13912822 -0.285952973
@@ -39,6 +32,22 @@ The `mshape( )` function estimates the average landmark coordinates for a set of
 [22,]  0.16277445  0.271624877
 attr(,"class")
 [1] "mshape" "matrix"
+
+# use mshape( ) to create a reference specimen
+> ref <- mshape(facesGPA$coords)
 ````
 
-This function is useful for comparing the amount of variation in each PC. You can plot the max and min variation for each PC
+## plotRefToTarget( )
+
+You can access the coordiante data for each principal component. If you want to plot the shape difference between a refrence and target specimen, use `plotRefToTarget( )` 
+
+````R
+# to compare specimen 1 to the reference, with three different plot types
+> plotRefToTarget(ref, facesGPA$coords[,,1], method = "TPS")
+> plotRefToTarget(ref, facesGPA$coords[,,1], method = "vector")
+> plotRefToTarget(ref, facesGPA$coords[,,1], method = "points")
+
+# to view the minimum and maximum variation for a PC
+> plotRefToTarget(ref, facesPCA$pc.shapes$PC1min, method = "TPS)
+> plotRefToTarget(ref, facesPCA$pc.shapes$PC1max, method = "TPS)
+````
