@@ -48,6 +48,12 @@ You can access the coordiante data for each principal component. If you want to 
 > plotRefToTarget(ref, facesGPA$coords[,,1], method = "points")
 
 # to view the minimum and maximum variation for a PC
-> plotRefToTarget(ref, facesPCA$pc.shapes$PC1min, method = "TPS)
-> plotRefToTarget(ref, facesPCA$pc.shapes$PC1max, method = "TPS)
+> plotRefToTarget(ref, facesPCA$pc.shapes$PC1min, method = "TPS")
+> plotRefToTarget(ref, facesPCA$pc.shapes$PC1max, method = "TPS")
+
+# to view the range of variation for a PC, line three plots up in a row
+> par(mfrow = c(1,3)
+> plotRefToTarget(ref, facesPCA$pc.shapes$PC1min, method = "TPS")
+> plotRefToTarget(ref, ref, method = "TPS")
+> plotRefToTarget(ref, facesPCA$pc.shapes$PC1max, method = "TPS")
 ````
