@@ -57,3 +57,4 @@ You can access the coordiante data for each principal component. If you want to 
 > plotRefToTarget(ref, ref, method = "TPS")
 > plotRefToTarget(ref, facesPCA$pc.shapes$PC1max, method = "TPS")
 ````
+![PC1 min and max](Images\plotref.png)
