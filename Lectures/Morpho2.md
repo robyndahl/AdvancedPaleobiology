@@ -6,6 +6,7 @@ To get started, we need to load in some data. We will use the Faces dataset from
 > install.packages("geomorph")
 > library(geomorph)
 > lands <- readland.tps("https://raw.githubusercontent.com/robyndahl/AdvancedPaleobiology/master/Lectures/landmarks.tps", specID = "ID")
+> specimens <- read.csv("https://raw.githubusercontent.com/robyndahl/AdvancedPaleobiology/master/Lectures/specimens.csv", header = TRUE)
 > facesGPA <- gpagen(lands)
 > facesPCA <- plotTangentSpace(facesGPA$coords)
 ````
