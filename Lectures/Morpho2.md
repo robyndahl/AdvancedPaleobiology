@@ -108,4 +108,4 @@ You can access the coordiante data for each principal component. If you want to 
         geom_point(aes(color = Name, shape = Expression))
 ````
 
-![Faces ggplot](facesggplot.png)
+![Faces ggplot](/Images/facesggplot.png)
