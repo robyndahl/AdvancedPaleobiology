@@ -105,6 +105,7 @@ You can access the coordiante data for each principal component. If you want to 
 
 # create the plot
 > ggplot(facesTIB, aes(PC1, PC2)) +
-        geom_point(aes(color = Name, shape = Expression)
+        geom_point(aes(color = Name, shape = Expression))
 ````
- 
+
+![Faces ggplot](facesggplot.png)
