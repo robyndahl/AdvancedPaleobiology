@@ -65,4 +65,35 @@ You can access the coordiante data for each principal component. If you want to 
 
 ````R
 > install.packages("tidyverse")
-> library(ggplot2)
+> library(tidyverse)
+
+# ggplot requires all data sources to be data frames or tibbles, so we need convert our data
+> facesTIB <- as.tibble(facesPCA$pc.scores)
+> facesTIB
+# A tibble: 27 x 26
+       PC1      PC2      PC3      PC4      PC5      PC6      PC7      PC8
+     <dbl>    <dbl>    <dbl>    <dbl>    <dbl>    <dbl>    <dbl>    <dbl>
+ 1 -0.0315  0.0184  -0.0402   7.76e-3 -1.94e-2  0.0321  -2.54e-2  1.86e-5
+ 2  0.0116 -0.0250  -0.0455   2.02e-2 -2.46e-2  0.0411  -2.68e-2 -2.80e-2
+ 3 -0.0328 -0.00610 -0.0267  -7.39e-4 -6.99e-3 -0.0119  -1.43e-2 -1.45e-2
+ 4 -0.0624  0.00560  0.0445  -4.15e-2 -1.40e-2  0.00977 -2.24e-2  1.22e-2
+ 5  0.0673  0.0128   0.0397  -5.44e-2 -6.07e-3  0.00572 -2.73e-3  4.87e-4
+ 6 -0.0638  0.00361  0.0491  -2.63e-2  5.89e-3 -0.0195  -2.95e-3 -3.22e-3
+ 7 -0.0397 -0.00280 -0.00718  1.20e-2  1.40e-2  0.0181   1.76e-2  3.55e-2
+ 8  0.0438 -0.0889  -0.0368   3.70e-2  2.12e-4  0.00646  2.71e-2  2.61e-2
+ 9 -0.0140  0.00281 -0.0879   7.64e-3  6.32e-2 -0.0259  -6.58e-4  3.31e-3
+10 -0.0224 -0.0520   0.0387  -1.87e-2  2.72e-2  0.0153  -1.83e-2  7.13e-3
+# ... with 17 more rows, and 18 more variables: PC9 <dbl>, PC10 <dbl>,
+#   PC11 <dbl>, PC12 <dbl>, PC13 <dbl>, PC14 <dbl>, PC15 <dbl>, PC16 <dbl>,
+#   PC17 <dbl>, PC18 <dbl>, PC19 <dbl>, PC20 <dbl>, PC21 <dbl>, PC22 <dbl>,
+#   PC23 <dbl>, PC24 <dbl>, PC25 <dbl>, PC26 <dbl>
+
+# add identifying information to facesTIB using mutate( )
+> facesTIB <- mutate(facesTIB, Name = specimens$Name)
+> facesTIB <- mutate(facesTIB, Expression = specimens$Expression)
+
+# create the plot
+> ggplot(facesTIB, aes(PC1, PC2)) +
+        geom_point(aes(color = Name, shape = Expression)
+````
+ 
