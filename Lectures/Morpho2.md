@@ -58,3 +58,7 @@ You can access the coordiante data for each principal component. If you want to 
 > plotRefToTarget(ref, facesPCA$pc.shapes$PC1max, method = "TPS")
 ````
 ![PC1 min and max](/Images/plotRef.png)
+
+## Use ggplot to plot the data
+
+`ggplot2` is a powerful data visualization package that we will not discuss extensively in this course. I will, however, provide examples of how to use `ggplot2` to visualize our projects. You can also learn `ggplot2` and there rest of `tidyverse` on your own, with the help of the book *R for Data Science* (conviently available [here](https://r4ds.had.co.nz/)).
