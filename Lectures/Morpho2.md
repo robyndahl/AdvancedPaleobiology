@@ -1,5 +1,15 @@
 # Additional Morphometrics Visualizations
 
+To get started, we need to load in some data. We will use the Faces dataset from my previous example. The datasets are available in this repository.
+
+````R
+> install.packages("geomorph")
+> library("geomorph")
+> lands <- readland.tps("https://raw.githubusercontent.com/robyndahl/AdvancedPaleobiology/master/Lectures/landmarks.tps", specID = "ID")
+> facesGPA <- gpagen(lands)
+> facesPCA <- plotTangentSpace(facesGPA$coords)
+````
+
 ## mshape( )
 
 The `mshape( )` function estimates the average landmark coordinates for a set of aligned specimens. You can use `mshape( )` to create an average reference specimen, which can then be used to show specific shape variation.
