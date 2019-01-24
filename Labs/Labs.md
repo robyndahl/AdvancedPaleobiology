@@ -5,7 +5,7 @@ This course will begin with an introduction to programming in R designed by Andr
 Lab | Due Date | Description | Quiz
 --- | -------- | ----------- | ----
 [Lab 01](https://github.com/aazaff/startLearn.R/blob/master/beginnerConcepts.md) | 01.15 | R Beginner Concepts | [Beginner Quiz](/Labs/Tests/BeginnerQuiz.md) - [Quiz Answers](/Labs/Tests/BeginnerQuizAnswers.md)
-[Lab 02](https://github.com/aazaff/startLearn.R/blob/master/intermediateConcepts.md) | 01.17 | R Intermediate Concepts | [Intermediate Quiz](/Labs/Tests/IntermediateQuiz.md) (Online, Due 01.22)
+[Lab 02](https://github.com/aazaff/startLearn.R/blob/master/intermediateConcepts.md) | 01.17 | R Intermediate Concepts | [Intermediate Quiz](/Labs/Tests/IntermediateQuiz.md) - [Quiz Answers](/Labs/Tests/IntermediateQuizAnswers.md)
 [Lab 03](https://github.com/aazaff/startLearn.R/blob/master/advancedConcepts.md) | 01.22 | R Advanced Concepts | [Advanced Quiz](/Labs/Tests/AdvancedQuiz.md) (Online, Due 01.24)
 [Lab 04](https://github.com/aazaff/startLearn.R/blob/master/expertConcepts.md) | 01.24 | R Expert Concepts | [Expert Quiz](/Labs/Tests/ExpertQuiz.md) (Online, Due 01.29)
 [Lab 05](/Labs/Lab05.md) | 01.31 | Introduction to Morphometrics | In Class, 01.31
