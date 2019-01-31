@@ -36,7 +36,7 @@ Ammonites<-read.csv(URL,row.names=1)
 
 Your basic workflow should to qualitatively (i.e., visually) decide which specimens you think belong to different species. Then you should subset the Ammonites array into several arrays based on your hypothesized species groupings. Using the techniques from the [expertConcepts](https://github.com/aazaff/startLearn.R/blob/master/expertConcepts.md) R tutorial (that we didn't actually complete in class), you can visualize, describe, or statistically test the different size and shape distributions of your hypothesized species. We can do this together in class if you are not sure how to on your own.
 
-You will find the following articles extremely helpful, particularly for question 4: [An introducton to ammonites](http://www.ukfossils.co.uk/guides/ammonites.html) and [Shell Anatomy and Diversity](https://en.wikipedia.org/wiki/Ammonoidea#Shell_anatomy_and_diversity).
+You will find the following articles extremely helpful, particularly for question 4: [An introducton to ammonites](https://ukfossils.co.uk/2013/06/13/an-introduction-to-ammonites/) and [Shell Anatomy and Diversity](https://en.wikipedia.org/wiki/Ammonoidea#Shell_anatomy_and_diversity).
 
 #### Part I Questions
 
