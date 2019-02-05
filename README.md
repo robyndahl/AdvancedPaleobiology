@@ -17,6 +17,8 @@ This course emphasizes quantitative paleobiology research methods and therefore 
 
 + [Laboratory Assignments](/Labs/Labs.md)
 + [Syllabus](Syllabus_Winter2019.pdf)
++ [Data Viz Cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)
++ [R for Data Science](https://r4ds.had.co.nz)
 
 ## Lecture Topics
 
