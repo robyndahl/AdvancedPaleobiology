@@ -19,6 +19,8 @@ This course emphasizes quantitative paleobiology research methods and therefore 
 + [Syllabus](Syllabus_Winter2019.pdf)
 + [Data Viz Cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)
 + [R for Data Science](https://r4ds.had.co.nz)
++ [Fundamentals of Data Visualization](https://serialmentor.com/dataviz/)
++ [R Workflow Tutorial](http://teststrata.geology.wisc.edu/teachPaleobiology/LectureSlides/RWorkflow.pdf)
 
 ## Lecture Topics
 
