@@ -69,7 +69,7 @@ PresencePBDB <- velociraptr::presenceMatrix(DataPBDB,Rows="early_interval",Colum
 Next, we need to use `cullMatrix` to clean up this new matri and remove depauperate samples and rare taxa. We will set it so that a sample needs at least 24 reported taxa for us to consider it reliable, and each taxon must occur in at least 5 samples. These are common minimums for sample sizes in ordination analysis.
 
 ````R
-PresencePBDB<-velociraptr::cullMatrix(PresencePBDB,Rarity=5,Richness=24)
+PresencePBDB <- velociraptr::cullMatrix(PresencePBDB,Rarity=5,Richness=24)
 ````
 
 **PROBLEM SET I**
