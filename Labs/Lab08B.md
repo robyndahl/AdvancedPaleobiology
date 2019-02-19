@@ -25,6 +25,7 @@ plot(PostCambrianCA,display="sites")
 ````
 
 Your final product should look like this:
+
 ![Lab 8 Fig 1](/Images/Lab08_Fig1.png)
 
 **STEP 3: ADVANCED PLOTTING**
@@ -63,6 +64,7 @@ PostCambrianSamples<-scores(PostCambrianCA,display="sites")
 # Now that we know the [x,y] values of each point, we can plot them.
 plot(x=PostCambrianSamples[,"RA1"],y=PostCambrianSamples[,"RA2"])
 ````
+
 ![Lab 8 Fig 2](/Images/Lab08_Fig2.png)
 
 It certainly works, but it is a lot uglier than what the `plot.decorana` method came up with. Here are a few things that we could do to improve the plot:
@@ -99,6 +101,7 @@ text(x=PostCambrianSamples[,"RA1"],y=PostCambrianSamples[,"RA2"],labels=dimnames
 ````
 
 Your plot should look like this:
+
 ![Lab 8 Fig 3](/Images/Lab08_Fig3.png)
 
 **STEP 4: ANALYSIS**
@@ -133,6 +136,7 @@ plot(PostCambrianDCA,display="sites")
 ````
 
 Your plot should look like this:
+
 ![Lab 8 Fig 4](/Images/Lab08_Fig4.png)
 
 You will notice that the arch effect is gone! This is good, but the DCA is suffering from a new problem known as the **Wedge** effect. You can envision the wedge effect by taking a piece of paper and twisting it, such that axis 1 is preserved reasonably undistorted, but the second axis of variation is expressed on DCA axis 2 on one end and on DCA axis 3 at the opposite end. This produces a pattern consisting of a tapering of sample points in axis 1-2 space and an opposing wedge in axis 1-3 space.
@@ -145,6 +149,7 @@ plot(PostCambrianDCA,display="sites",choices=c(1,3))
 ````
 
 Your new plot should look like this:
+
 ![Lab 8 Fig 5](/Images/Lab08_Fig5.png)
 
 ## Multi-dimensional Scaling
@@ -177,6 +182,7 @@ text(PostCambrianNMDS,display="sites")
 ````
 
 Your plot should look like this:
+
 ![Lab 8 Fig 6](/Images/Lab08_Fig6.png)
 
 It's the Arch Effect again, just like in correspondence analysis!!! Despite the fact that many ecologists like to praise NMDS over CA and DCA, the differences between them are exaggerated. The reason for this is that all three are unreliable when there isn't a strong gradient to pick up in the first place.
