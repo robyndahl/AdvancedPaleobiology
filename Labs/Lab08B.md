@@ -100,6 +100,24 @@ text(x=PostCambrianSamples[,"RA1"],y=PostCambrianSamples[,"RA2"],labels=dimnames
 text(x=PostCambrianSamples[,"RA1"],y=PostCambrianSamples[,"RA2"],labels=dimnames(PostCambrianSamples)[[1]],cex=1.5,col="dodgerblue3")
 ````
 
+Coloring is a very powerful visual aid. We might want to subset the data into different groupings, and color those grouping differently to look for clusters in the ordination space. Let's try splitting the dataset into three parts: Cenozoic Epochs (1-66 mys ago), Mesozoic Epochs (66-252 mys), and the Paleozoic (252-541 mys), and plot each with a different color.
+
+````R
+# Create plot empty of points (but scaled to the data) by adding the type="n" argument.
+plot(x=PostCambrianSamples[,"RA1"],y=PostCambrianSamples[,"RA2"],pch=16,las=1,xlab="Gradient Axis 1",ylab="Gradient Axis 2",type="n")
+
+# Separate out the epochs
+Cenozoic<-PostCambrianSamples[c("Pleistocene","Pliocene","Miocene","Oligocene","Eocene","Paleocene"),]
+Mesozoic<-PostCambrianSamples[c("Late Cretaceous","Early Cretaceous","Late Jurassic","Early Jurassic","Late Triassic","Middle Triassic","Early Triassic"),]
+Paleozoic<-PostCambrianSamples[c("Lopingian","Guadalupian","Cisuralian","Pennsylvanian","Mississippian","Late Devonian","Middle Devonian","Early Devonian","Pridoli","Ludlow","Wenlock","Llandovery","Late Ordovician","Middle Ordovician","Early Ordovician"),]
+
+# Plot Cenozoic in gold
+text(x=Cenozoic[,"RA1"],y=Cenozoic[,"RA2"],labels=dimnames(Cenozoic)[[1]],col="gold")
+# Plot Mesozoic in blue
+text(x=Mesozoic[,"RA1"],y=Mesozoic[,"RA2"],labels=dimnames(Mesozoic)[[1]],col="blue")
+# Plot Paleozoic in dark green
+text(x=Paleozoic[,"RA1"],y=Paleozoic[,"RA2"],labels=dimnames(Paleozoic)[[1]],col="darkgreen")
+````
 Your plot should look like this:
 
 ![Lab 8 Fig 3](/Images/Lab08_Fig3.png)
