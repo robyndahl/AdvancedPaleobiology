@@ -101,18 +101,19 @@ for (counter in Repeat) {
 # Take a peak at what Resampled Means looks like, the numbers should be the same. If not, go back and re-set your
 # seed, and try again from that step onwards.
 head(ResampledMeans)
-[1] 24.46657 23.55738 26.87615 23.41481 26.23879 21.94562
+[1] 24.43533 23.37868 24.68566 27.66077 24.65676 22.70525
 ````
 
 #### Problem Set 2
 
-1) Qualitatively describe what is happening in the following line of code. A good answer should identify what the different arguments are for each function, and what they are used for.
+1) Qualitatively describe what is happening in the following lines of code. A good answer should identify what the different arguments are for each function, and what they are used for.
 
 ````R
-mean(sample(Lucina[,"paleolng"],length(Lucina[,"paleolng"]),replace=TRUE))
+> PaleoLng <- na.omit(Lucina$paleolng)
+> mean(sample(PaleoLng, length(PaleoLng), replace=TRUE))
 ````
 
-2) Plot a [kernel density](https://github.com/aazaff/startLearn.R/blob/master/expertConcepts.md#describing-distributions-with-statistics) graph of ````ResampledMeans````. Show your code. Does the distribution look approximately Gaussian? Explain why you think it does or does not.
+2) Plot a [kernel density](https://github.com/aazaff/startLearn.R/blob/master/expertConcepts.md#describing-distributions-with-statistics) graph of `ResampledMeans`. Show your code. Does the distribution look approximately Gaussian? Explain why you think it does or does not.
 
 3) Find the mean of ````ResampledMeans````, is it similar to the mean of the original data?
 
