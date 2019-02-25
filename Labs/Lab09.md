@@ -1,0 +1,1 @@
+# Calculating Stratigraphic Ranges
