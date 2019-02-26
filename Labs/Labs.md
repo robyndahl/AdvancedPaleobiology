@@ -11,8 +11,8 @@ Lab | Due Date | Description | Quiz
 [Lab 05](/Labs/Lab05.md) | 01.31 | Introduction to Morphometrics | In Class, 01.31
 [Lab 06](/Labs/Lab06.md) | 02.07 | Introduction to Building Phylogenies | In Class, 02.07
 [Lab 07](/Labs/Lab07.md) | 02.14 | Introduction to the Paleobiology Database | In Class, 02.14
-[Lab 08A](/Labs/Lab08A.md) | 02.21 | Modeling Ecological Gradients Pt. 1 | In Class, 02.21
-[Lab 08B](/Labs/Lab08B.md) | 02.21 | Modeling Ecological Gradients Pt. 2 | In Class, TBD
+[Lab 08A](/Labs/Lab08A.md) | 02.21 | Modeling Ecological Gradients Pt. 1 | [Answers](/Labs/Tests/Lab08Answers.md)
+[Lab 08B](/Labs/Lab08B.md) | 02.21 | Modeling Ecological Gradients Pt. 2 | [Answers](/Labs/Tests/Lab08Answers.md)
 [Lab 09](/Labs/Lab09.md) | 02.28 | Calculating Stratigraphic Ranges | In Class, 02.28
 [Lab 10](/Labs/Lab10.md) | 03.07 | Photogrammetry | In Class, 03.07
 [Lab 11](/Labs/Lab11.md) | 03.14 | Collecting 3D Data
