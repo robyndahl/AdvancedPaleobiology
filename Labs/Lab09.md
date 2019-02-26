@@ -122,3 +122,40 @@ head(ResampledMeans)
 5) Now that you have sorted ````ResampledMeans````, what is the 2.5th percentile of ResampledMeans and what is the 97.5th percentile of Resampled means. If you do not know what a percentile is, or how to calculate it, you can use google. Show your code. 
 
 6) Incidentally, these numbers (your answer to question 5) are the lower and upper confidence interval of the mean! Qualitatively explain why this is the case.
+
+#### Step 1
+
+Load in the following function I wrote for you!
+
+````R
+# From Marshall's (1990) adaptation of Strauss and Sadler.
+estimateExtinction <- function(OccurrenceAges, ConfidenceLevel=.95)  {
+  # Find the number of unique "Horizons"
+  NumOccurrences<-length(unique(OccurrenceAges))-1
+  Alpha<-((1-ConfidenceLevel)^(-1/NumOccurrences))-1
+  Lower<-min(OccurrenceAges)
+  Upper<-min(OccurrenceAges)-(Alpha*10)
+  return(setNames(c(Lower,Upper),c("Earliest","Latest")))
+  }
+````
+
+#### Step 1
+
+Let's find the estimated extinction date for the genus *Lucina* using the `estimateExtinction( )` function.
+
+````R
+estimateExtinction(Lucina[,"min_ma"],0.95)
+ Earliest    Latest 
+ 0.000000 -1.173424
+````
+
+#### Problem Set 3
+
+1) Based on the confidence intervals given above, do you think it likely or unlikely that *Lucina* is still alive?
+
+2) Find the extinction confidence interval for the genus *Dallarca*. Show your code.
+
+3) A pure reading of the fossil record says that *Dallarca* went extinct at the end of the Pliocene Epoch. Based on its confidence interval, do you think it is possible that *Dallarca* is still extant (alive)?
+
+4) In this case, should we trust the confidence interval or a pure reading of the fossil record? Explain your reasoning.
+
