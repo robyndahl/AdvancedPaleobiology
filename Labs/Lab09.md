@@ -196,3 +196,56 @@ ExtantData <- subset(DataPBDB,DataPBDB$genus%in%ExtantBivalves$Extant==TRUE)
 4) Using your answer to question 3, find which genera in `ExtantData` are not extant according to the PBDB - i.e., do not have a minimum min_age of zero. Show your code.
 
 5) Calculate the confidence interval for the extinction of the following genera (careful with your spelling!): *Scrobicularia*, *Meiocardia*, *Dimya*, *Digitaria*, *Cuspidaria*, *Arctica*, *Aloides*, *Kurtiella*, *Gouldia*, and *Acrosterigma*. Show your code. What percentage of these taxa have confidence intervals indicating that the taxon might still be extant?
+
+First, write a function that subsets the data by chosen genus and then uses the `extimateExtinction` function:
+
+````R
+Extinction <- function(DataPBDB, genus) {
++     genusSubset <- DataPBDB[which(DataPBDB[,"genus"] == genus),]
++     return(estimateExtinction(genusSubset$min_ma, 0.95))
++ }
+````
+
+Then use the function to estimate extinction for the relevant genera:
+
+````R
+> Extinction(DataPBDB, "Scrobicularia")
+ Earliest    Latest 
+  0.01170 -34.70966 
+
+> Extinction(DataPBDB, "Meiocardia")
+ Earliest    Latest 
+ 0.011700 -3.937808 
+
+> Extinction(DataPBDB, "Dimya")
+ Earliest    Latest 
+ 0.781000 -2.054688 
+
+> Extinction(DataPBDB, "Digitaria")
+ Earliest    Latest 
+ 0.781000 -3.761154 
+
+> Extinction(DataPBDB, "Cuspidaria")
+ Earliest    Latest 
+2.5880000 0.8802009 
+
+> Extinction(DataPBDB, "Arctica")
+ Earliest    Latest 
+ 0.011700 -1.696099 
+
+> Extinction(DataPBDB, "Aloides")
+Earliest   Latest 
+   5.333     -Inf 
+
+> Extinction(DataPBDB, "Kurtiella")
+ Earliest    Latest 
+   0.0117 -189.9883 
+
+> Extinction(DataPBDB, "Gouldia")
+ Earliest    Latest 
+ 0.011700 -2.047386 
+
+> Extinction(DataPBDB, "Acrosterigma")
+ Earliest    Latest 
+ 0.011700 -3.481128 
+````
