@@ -1,4 +1,4 @@
-# Modeling Ecological Gradients Using Multivariate Data
+# Modeling Ecological Gradients Using Multivariate Data Part A
 
 ## Problem Set 1
 
