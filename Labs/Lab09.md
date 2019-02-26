@@ -159,3 +159,40 @@ estimateExtinction(Lucina[,"min_ma"],0.95)
 
 4) In this case, should we trust the confidence interval or a pure reading of the fossil record? Explain your reasoning.
 
+## Non-Uniform Recovery
+
+The problem with the `estimateExtinction(  )` function is that it makes an important assumption that is unlikely to be true. 
+
+It assumes randomly distributed fossils. In other words, the fossil occurrences of taxa are randomly distributed in time, and the likelihood of preservation does not change up or down a stratigraphic section.
+
+For this reason, paleobiologists have developed more sophisticated versions of confidence interval analysis. However, for simplicity, we will stick with the Strauss and Sadler (1987) method. 
+
+#### Problem Set 4
+
+1) State one ecological reason why this assumption is unlikey to be true.
+
+2) State one geological reason why this assumpiton is unlikely to be true.
+
+## Testing Strauss and Sadler 
+
+Let's take a list of bivalve genera that we know to be extant today, but are extinct according to the Paleobiology Database.
+
+````R
+# Load in a csv of extant bivalves
+ExtantBivalves <- read.csv("https://raw.githubusercontent.com/paleobiodb/teachPaleobiology/master/Lab7Figures/ExtantBivalves.csv",row.names=1,header=TRUE)
+
+# Subset DataPBDB to find only occurrences of ExtantBivalves
+ExtantData <- subset(DataPBDB,DataPBDB$genus%in%ExtantBivalves$Extant==TRUE)
+````
+
+#### Problem Set 5
+
+1) How many occurrences are in `DataPBDB`. How many are in `ExtantData`? How many occurrences were lost by limiting our anaysis to only extant bivalves?
+
+2) How many `unique(  )` genera were in `DataPBDB` and `ExtantData`, respectively. Using this information, what percentage of Cenozoic bivalves in the PBDB are still extant today.
+
+3) Find the stratigraphic range of fossil occurrences for each genus in the `ExtantData` dataset. If you do not remember how to do this, revisit [Problem Set 1](#problem-set-1) of this lab.
+
+4) Using your answer to question 3, find which genera in `ExtantData` are not extant according to the PBDB - i.e., do not have a minimum min_age of zero. Show your code.
+
+5) Calculate the confidence interval for the extinction of the following genera (careful with your spelling!): *Scrobicularia*, *Meiocardia*, *Dimya*, *Digitaria*, *Cuspidaria*, *Arctica*, *Aloides*, *Kurtiella*, *Gouldia*, and *Acrosterigma*. Show your code. What percentage of these taxa have confidence intervals indicating that the taxon might still be extant?
