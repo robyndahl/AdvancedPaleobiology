@@ -185,59 +185,39 @@ https://paleobiodb.org/data1.2/colls/list.csv?base_name=Mammut&interval=Pliocene
 
 Wouldn't it be really convenient if, instead of typing out the URL every time, you could just write an R function that takes a specific taxon name and interval and downloads the data directly into R?
 
-Specifically, your final question for this lab is the write a function in R that will take as its arguments a **taxon name** and an **interval** and download all fossil occurrences from the PBDB as a csv.
+Since we haven't practiced writing our own functions in R yet, I will walk you through an example that will allow us to directly access data from the PBDB. This function was written by Andrew Zaffos and is included in the velociraptR package, which we will make use of in next week's lab.
 
-Your final product should look like this:
+The function we will write will be called `downloadPBDB`. It will allow us to specify a taxon and a time interval in the PBDB. Examine the code below to see how the API that we learned about earlier is incorporated into the function:
 
 ````R
-# Download all instances of the genus Abra from the Pleistocene interval
-AbraData <- downloadPBDB(taxon="Abra",interval="Pleistocene")
+# install and load a necessary package for reading URLs
+install.packages("RCurl")
+library(RCurl)
 
-# Your output should look like this
-AbraData[1:6,1:6]
-  occurrence_no record_type reid_no flags collection_no identified_name
-1         94761         occ      NA    NA          7108   Abra aequalis
-2        256368         occ      NA    NA         20604   Abra aequalis
-3        256386         occ      NA    NA         20606   Abra aequalis
-4        425385         occ      NA    NA         41501   Abra aequalis
-5        427341         occ      NA    NA         41705   Abra aequalis
-6        427901         occ      NA    NA         41740   Abra aequalis
+# write the function
+downloadPBDB<-function(Taxa, Interval="Pleistocene") {
+  Taxa<-paste(Taxa,collapse=",")
+  URL<-paste("https://paleobiodb.org/data1.2/occs/list.csv?base_name=",Taxa,"&interval=",Interval,",&show=coords,paleoloc,phylo&limit=all",sep="")
+  GotURL<-getURL(URL)
+  File<-read.csv(text=GotURL,header=T)
+  return(File)
+}
+````
 
-# Download all instances of the genus Tyrannosaurus from the Mesozoic
-TRexData <- downloadPBDB(taxon="Tyrannosaurus",interval="Mesozoic")
+Now try using the function! As an example, let's look at T. rex occurrences during the Cretaceous:
 
-# Your output shoud look like this
+````R
+TRexData <- downloadPBDB("Tyrannosaurus", Interval = "Cretaceous")
+
+# Take a peek at what the function returns
 TRexData[1:6,1:6]
   occurrence_no record_type reid_no flags collection_no       identified_name
 1        139292         occ   22878    NA         11917     Tyrannosaurus rex
-2        139293         occ      NA    NA         11918 Tyrannosaurus cf. rex
-3        219998         occ      NA    NA         22654     Tyrannosaurus rex
-4        220009         occ      NA    NA         22657     Tyrannosaurus rex
-5        280101         occ      NA    NA         26760     Tyrannosaurus rex
-6        291021         occ      NA    NA         14640 Tyrannosaurus cf. rex
+2        139293         occ      NA    NA         11918 cf. Tyrannosaurus rex
+3        220009         occ      NA    NA         22657     Tyrannosaurus rex
+4        280101         occ      NA    NA         26760     Tyrannosaurus rex
+5        291021         occ      NA    NA         14640 cf. Tyrannosaurus rex
+6        396125         occ      NA    NA         38078     Tyrannosaurus sp.
 ````
 
-In order to achieve this, you will need to use the `paste( )` function. Here are some examples of the paste function. See if you can figure out how it fits into the problem.
-
-````R
-# Example 1
-paste("We","Love","R",sep=" ")
-[1] "We Love R"
-
-# Example 2
-paste("We","Love","R",sep="")
-[1] "WeLoveR"
-
-# Example 3
-paste("We","Love","R",sep="!")
-[1] "We!Love!R"
-
-# Example 4
-LoveR <- c("We Love R")
-HateR <- c("We Hate R")
-paste(LoveR,HateR,sep=" >> ")
-[1] "We Love R >> We Hate R"
-````
-**Exercise Questions Part 5**
-
-1. Write an R function that will take a taxonomic name (as a character string) and an interval (as a character string) as its argument, and will download all fossil occurrences in R. See above.
+For your last task on this assignment, use the `downloadPBDB` function we just wrote to download occurrences for a taxon of your choosing. Include the code you used to use the function, and then determine how many entries there are for that taxon within the timebin your chose to examine. For example, if you were to use the T. rex data we downloaded above, I would want to see how you used the function (`TRexData <- downloadPBDB("Tyrannosaurus", Interval = "Cretaceous")`) and the number of T. rex occurrences during the Cretaceous (81).
