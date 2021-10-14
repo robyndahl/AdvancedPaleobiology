@@ -167,21 +167,19 @@ The first half of the query, before the **?**, is pretty straightforward because
 
 **Exercise Questions Part 4**
 
-1. In your morphometrics lab, you downloaded a csv file of ammonite sizes from a GitHub URL directly into R. What code would you use to download the following PBDB data directly into R?
-
 ````
 https://paleobiodb.org/data1.2/colls/list.csv?base_name=Mammut&interval=Pliocene
 ````
 
-2. Download the data from the URL above into R. What are its dimensions?
+1. Download the data from the URL above into R. What are its dimensions?
 
-3. Did the above call use the occurrences, collections, references, opinions, or specimens route?
+2. Did the above call use the occurrences, collections, references, opinions, or specimens route?
 
-4. What genus is being called for? What is its colloquial name? What age was the call limited to?
+3. What genus is being called for? What is its colloquial name? What age was the call limited to?
 
-5. Look through the service doumentation for the appropriate route (based on your answer to Question 2). Find out how to extend the age search range from the Miocene Epoch through the Pleistocene Epoch. Give the new data query URL.
+4. Look through the service doumentation for the appropriate route (based on your answer to Question 2). Find out how to extend the age search range from the Miocene Epoch through the Pleistocene Epoch. Give the new data query URL.
 
-6. What URL would you use to show the paleocoordinates (i.e., paleolatitude and paleolongitude) of each data point?
+5. What URL would you use to show the paleocoordinates (i.e., paleolatitude and paleolongitude) of each data point?
 
 ## Writing Your Own API Function in R
 
