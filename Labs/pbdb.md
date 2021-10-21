@@ -129,7 +129,7 @@ Use the following code to perform and plot a basic correspondence analysis on `P
 ````R
 # Run a correspondence analysis using the decorana( ) function of vegan
 # ira = 1 tells it to run a basic correspondence analysis rather than detrended correspondence analysis
-PostCambrianCA<-vegan::decorana(PostCambrian,ira=1)
+PostCambrianCA <- decorana(PostCambrian,ira=1)
 
 # Plot the inferred samples (sites).
 # If you want to see the taxa, use display="species"
@@ -157,7 +157,7 @@ The **generic** version of plot (i.e., the version of plot that does not use any
 ````R
 # Use the scores( ) function if you want to see/use the numerical values of the inferred gradient scores
 # Note that by scores we mean gradient values - e.g., a temperature of 5 degrees or a depth of 10m
-PostCambrianSpecies<-scores(PostCambrianCA,display="species")
+PostCambrianSpecies <- scores(PostCambrianCA,display="species")
 
 # This shows the weighted average of all species abundances along each inferred gradient axis.
 # i.e., The weight-average of Amphiscapha is 5.22 along axis 1, and -3.799 along axis 2.
@@ -171,7 +171,7 @@ Palaeostylus   5.322415 -3.151507 -2.536464 0.60251234
 Meekospira     5.322415 -3.151507 -2.536464 0.60251234
 
 # You can also do this for sample ("sites") scores as well.
-PostCambrianSamples<-scores(PostCambrianCA,display="sites")
+PostCambrianSamples <- scores(PostCambrianCA,display="sites")
 
 # Now that we know the [x,y] values of each point, we can plot them.
 plot(x=PostCambrianSamples[,"RA1"],y=PostCambrianSamples[,"RA2"])
@@ -260,7 +260,7 @@ You can perform a DCA in R using the `decorana( )` function of the `vegan` packa
 ````R
 # Peform a DCA on the Post Cambrian Dataset
 # ira = 0 is the default, so you do not need to put that part in.
-PostCambrianDCA<-vegan::decorana(PostCambrian,ira=0)
+PostCambrianDCA <- decorana(PostCambrian,ira=0)
 
 # Plot the DCA
 plot(PostCambrianDCA,display="sites")
@@ -296,7 +296,7 @@ However, if you just want the highlights, here is what you need to know.
 Here is how you run an NMDS in R using the `vegan` package.
 
 ````R
-PostCambrianNMDS<-metaMDS(PostCambrian)
+PostCambrianNMDS <- metaMDS(PostCambrian)
 
 # The plotting defaults for metaMDS output is not as good as for decorana( )
 # We have to do some graphical fiddling.
