@@ -26,25 +26,43 @@ library(velociraptr)
 Download a dataset of Phanerozoic bivalve and gastropod fossils using the `downloadPBDB( )` function. This data includes ALL clams and snails from the Cambrian through the Pleistocene, so it will likely take a few minutes to download.
 
 ````R
-DataPBDB <- velociraptr::downloadPBDB(Taxa=c("Bivalvia","Gastropoda"),StartInterval="Cambrian",StopInterval="Pleistocene")
+DataPBDB <- downloadPBDB(Taxa=c("Bivalvia","Gastropoda"),StartInterval="Cambrian",StopInterval="Pleistocene")
+````
+
+If your download keeps timing out, you can split your download into chunks and then recombine them using the following script:
+
+````R
+dataPaleozoic <- downloadPBDB(Taxa = c("Bivalvia","Gastropoda"),
+                             StartInterval = "Cambrian",
+                             StopInterval = "Permian")
+
+dataMesozoic <- downloadPBDB(Taxa = c("Bivalvia","Gastropoda"),
+                             StartInterval = "Triassic",
+                             StopInterval = "Cretaceous")
+
+dataCenozoic <- downloadPBDB(Taxa = c("Bivalvia","Gastropoda"),
+                             StartInterval = "Paleogene",
+                             StopInterval = "Pleistocene")
+
+dataPBDB <- rbind(dataPaleozoic,dataMesozoic,dataCenozoic)
 ````
 
 Then, use `cleanTaxonomy( )` to remove any occurrences that are not properly resolved to the genus level.
 
 ````R
-DataPBDB <- velociraptr::cleanTaxonomy(DataPBDB,"genus")
+DataPBDB <- cleanTaxonomy(DataPBDB,"genus")
 ````
 
 Next, use `downloadTime( )` to download a matrix of geologic epoch definitions and metadata. We will use this information to constain the ages of fossils from `DataPBDB`.
 
 ````R
-Epochs <- velociraptr::downloadTime(Timescale="international epochs")
+Epochs <- downloadTime(Timescale="international epochs")
 ````
 
 Finally, use `constrainAges( )` to remove any remaining fossils that are poorly constrained.
 
 ````R
-DataPBDB <- velociraptr::constrainAges(DataPBDB,Epochs)
+DataPBDB <- constrainAges(DataPBDB,Epochs)
 ````
 
 **STEP 3**
@@ -61,13 +79,13 @@ Here are a few things to remember about community matrices.
 Let's convert our PBDB dataset into a presence-absence dataset using the `presenceMatrix( )` function fo the PBDB package. This function requires that you define which column will count as samples. For now, let's use "`early_interval`" (i.e., geologic age) as the separator. Because we are using a large dataset, this set might take a few minutes.
 
 ````R
-PresencePBDB <- velociraptr::presenceMatrix(DataPBDB,Rows="early_interval",Columns="genus")
+PresencePBDB <- presenceMatrix(DataPBDB,Rows="early_interval",Columns="genus")
 ````
 
 Next, we need to use `cullMatrix` to clean up this new matri and remove depauperate samples and rare taxa. We will set it so that a sample needs at least 24 reported taxa for us to consider it reliable, and each taxon must occur in at least 5 samples. These are common minimums for sample sizes in ordination analysis.
 
 ````R
-PresencePBDB <- velociraptr::cullMatrix(PresencePBDB,Rarity=5,Richness=24)
+PresencePBDB <- cullMatrix(PresencePBDB,Rarity=5,Richness=24)
 ````
 
 **PROBLEM SET I**
