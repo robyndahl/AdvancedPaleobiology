@@ -70,7 +70,8 @@ plot(x=PostCambrianSamples[,"RA1"],y=PostCambrianSamples[,"RA2"])
 It certainly works, but it is a lot uglier than what the `plot.decorana` method came up with. Here are a few things that we could do to improve the plot:
 
 ````R
-plot(x=PostCambrianSamples[,"RA1"],y=PostCambrianSamples[,"RA2"],pch=16,las=1,xlab="Gradient Axis 1",ylab="Gradient Axis 2",cex=2)
+plot(x=PostCambrianSamples[,"RA1"],y=PostCambrianSamples[,"RA2"],
+  pch=16,las=1,xlab="Gradient Axis 1",ylab="Gradient Axis 2",cex=2)
 ````
 
 Plotting Arguments | Description
