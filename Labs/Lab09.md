@@ -33,7 +33,7 @@ If your download fails for any reason, load the data directly using the followin
 
 ````R
 # Download directly from this course's GitHub Repository
-DataPBDB <- read.csv("https://github.com/robyndahl/AdvancedPaleobiology/blob/master/Labs/cenozoic.csv")
+DataPBDB <- read.csv("https://raw.githubusercontent.com/robyndahl/AdvancedPaleobiology/master/Labs/cenozoic.csv")
 
 # Clean up bad genus names
 DataPBDB <- cleanRank(DataPBDB)
